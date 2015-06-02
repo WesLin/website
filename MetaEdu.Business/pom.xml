@@ -25,7 +25,7 @@
 				</excludes>
 			</resource>
 		</resources>
-		<directory>E:\JAVA_PROJECT\MetaEdu.Business\target</directory>
+		<!-- <directory>E:\JAVA_PROJECT\MetaEdu.Business\target</directory> -->
 		<finalName>metaedu-business-1.0-SNAPSHOT</finalName>
 		<pluginManagement>
 			<plugins>
@@ -50,28 +50,12 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.1</version>
 				<!-- 确保 JRE 编译版本 -->
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
-				<executions>
-					<execution>
-						<id>default-compile</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>default-testCompile</id>
-						<phase>test-compile</phase>
-						<goals>
-							<goal>testCompile</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
