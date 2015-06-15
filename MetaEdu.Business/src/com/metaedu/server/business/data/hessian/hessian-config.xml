@@ -24,7 +24,7 @@
 
 	<!-- education.IInstitutionQuery 实现 -->
 	<bean id="IInstitutionQuery" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
-		<property name="serviceUrl" value="${education}InstitutionQuery" />
+		<property name="serviceUrl" value="${webdata}InstitutionQuery" />
 		<property name="serviceInterface" value="com.metaedu.business.data.education.IInstitutionQuery" />
 	</bean>
 	
