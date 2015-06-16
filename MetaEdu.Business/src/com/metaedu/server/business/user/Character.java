@@ -12,150 +12,159 @@ import com.metaedu.server.business.sharing.SharingLevel;
 public class Character {
 
 	/** 角色主键 */
-	private String _id;
+	private String id;
 	
-	/** 获取角色主键
-	 * @return
-	 */
+	/** 获取角色主键 */
 	public String getId() {
-		return this._id;
+		return this.id;
 	}
 	
-	/** 设置角色主键
-	 * @param refId
-	 */
+	/** 设置角色主键 */
 	public void setId(String refId) {
-		this._id = refId;
+		this.id = refId;
 	}
 	
+	/** 关联用户编号 */
+	private String userId;
+	
+	/** 获取关联用户编号 */
+	public String getUserId() {
+		return userId;
+	}
+	
+	/** 设置关联用户编号 */
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
 	/** 关联机构编号 */
-	private String _institutionId;
+	private String institutionId;
 	
-	/** 获取关联机构编号
-	 * @return
-	 */
+	/** 获取关联机构编号 */
 	public String getInstitutionId() {
-		return this._institutionId;
+		return this.institutionId;
 	}
 	
-	/** 角色类型，默认学生 */
-	private int _characterType = CharacterType.STUDENT;
-	
-	/** 获取角色类型
-	 * @return
-	 */
-	public int getCharacterType() {
-		return this._characterType;
+	/** 设置关联机构编号 */
+	public void setInstitutionId(String refInstitutionId) {
+		this.institutionId = refInstitutionId;
 	}
-	
+
 	/** 学号或者工号（管理员强制为 admin）*/
-	private String _characterNumber;
+	private String characterNumber;
 	
-	/** 获取学号或者工号
-	 * @return
-	 */
+	/** 获取学号或者工号 */
 	public String getCharacterNumber() {
-		return this._characterNumber;
+		return this.characterNumber;
+	}
+	
+	/** 设置学号或者工号 */
+	public void setCharacterNumber(String characterNumber) {
+		this.characterNumber = characterNumber;
 	}
 	
 	/** 学号工号对应密码 */ 
-	private String _password;
+	private String characterPassword;
 	
-	/** 获取学号工号对应密码
-	 * @return
-	 */
-	public String getPassword() {
-		return this._password;
+	/** 获取学号工号对应密码 */
+	public String getCharacterPassword() {
+		return this.characterPassword;
 	}
 	
-	/** 是否已软删除 */
-	private boolean _isDeleted = false;
+	/** 设置学号工号对应密码 */
+	public void setCharacterPassword(String characterPassword) {
+		this.characterPassword = characterPassword;
+	}
+
+	/** 角色类型，默认学生 */
+	private int characterType = CharacterType.STUDENT;
 	
-	/** 获取是否已软删除
-	 * @return
-	 */
-	public boolean getIsDeleted() {
-		return this._isDeleted;
+	/** 获取角色类型 */
+	public int getCharacterType() {
+		return this.characterType;
 	}
 	
-	/** 是否为主属机构 */
-	private boolean _isHostInstitution = true;
-	
-	/** 获取是否为主属机构
-	 * @return
-	 */
-	public boolean getIsHostInstitution() {
-		return this._isHostInstitution;
+	/** 设置角色类型 */
+	public void setCharacterType(int refType) {
+		this.characterType = refType;
 	}
 	
-	/** 共享级别（对机构而言），默认私有 */
-	private int _sharingLevel = SharingLevel.PRIVATE;
+	/** 共享级别，默认私有 */
+	private int sharingLevel = SharingLevel.PRIVATE;
 	
-	/** 获取共享级别（对机构而言）
-	 * @return
-	 */
+	/** 获取共享级别，默认私有 */
 	public int getSharingLevel() {
-		return this._sharingLevel;
+		return sharingLevel;
 	}
-	
-	/** 机构登记名 */
-	private String _firstName;
-	
-	/** 获取机构登记名
-	 * @return
-	 */
-	public String getFirstName() {
-		return this._firstName;
+
+	/** 设置共享级别 */
+	public void setSharingLevel(int sharingLevel) {
+		this.sharingLevel = sharingLevel;
 	}
-	
-	/** 机构登记姓 */
-	private String _surName;
-	
-	/** 获取机构登记姓
-	 * @return
-	 */
-	public String getSurName() {
-		return this._surName;
-	}
-	
+
 	/** 角色使用的邮件信息 */
-	private String _email;
+	private String email;
 	
-	/** 获取角色使用的邮件信息
-	 * @return
-	 */
+	/** 获取角色使用的邮件信息 */
 	public String getEmail() {
-		return this._email;
+		return this.email;
 	}
-	
+
+	/** 设置角色使用的邮件信息 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	/** 角色使用的手机信息 */
-	private String _mobile;
+	private String mobile;
 	
-	/** 获取角色使用的手机信息
-	 * @return
-	 */
+	/** 获取角色使用的手机信息 */
 	public String getMobile() {
-		return this._mobile;
+		return this.mobile;
 	}
 	
-	/** 角色创建时间 */
-	private Date _createTime;
+	/** 设置角色使用的手机信息 */
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	/** 是否有效角色 */
+	private boolean isValid = true;
 	
-	/** 获取角色创建时间
-	 * @return
-	 */
+	/** 获取是否有效角色 */
+	public boolean getIsValid() {
+		return this.isValid;
+	}
+	
+	/** 设置是否有效角色 */
+	public void setValid(boolean isValid) {
+		this.isValid = isValid;
+	}
+
+	/** 角色创建时间 */
+	private Date createTime;
+	
+	/** 获取角色创建时间 */
 	public Date getCreateTime() {
-		return this._createTime;
+		return this.createTime;
+	}
+	
+	/** 设置角色创建时间 */
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 	
 	/** 角色更新时间 */
-	private Date _updateTime;
+	private Date updateTime;
 	
-	/** 获取角色更新时间
-	 * @return
-	 */
+	/** 获取角色更新时间 */
 	public Date getUpdateTime() {
-		return this._updateTime;
+		return this.updateTime;
+	}
+
+	/** 设置角色更新时间 */
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
 	
 	
