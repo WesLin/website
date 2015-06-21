@@ -1,4 +1,4 @@
-package com.metaedu.server.business.data.education;
+package com.metaedu.server.business.data.interfaces.institution;
 
 import com.metaedu.server.business.institution.Institution;
 
@@ -7,7 +7,7 @@ import com.metaedu.server.business.institution.Institution;
  * @version 1.0
  * @since 2015.05.18
  */
-public interface IInstitutionQuery {
+public interface IInstitutionData {
 
 	/** 获取指定编号的机构实例
 	 * @param refId 机构实例的编号
@@ -15,6 +15,11 @@ public interface IInstitutionQuery {
 	 */
 	public Institution getInstitutionById(String refId);
 	
+	/** 创建一个机构
+	 * @param refInstitution
+	 * @return
+	 */
+	public boolean createInstitution(Institution refInstitution);
 	
 	
 	

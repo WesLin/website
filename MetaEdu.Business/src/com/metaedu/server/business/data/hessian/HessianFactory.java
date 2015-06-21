@@ -20,7 +20,7 @@ public class HessianFactory {
 	
 	/** 静态方法 */
 	static {
-		ApplicationContext curContext = new ClassPathXmlApplicationContext("classpath:/com/metaedu/business/data/hessian/hessian-config.xml");  
+		ApplicationContext curContext = new ClassPathXmlApplicationContext("classpath:/com/metaedu/business/data/hessian/hessian-config.xml");
 		_context = curContext;
 	}
 	

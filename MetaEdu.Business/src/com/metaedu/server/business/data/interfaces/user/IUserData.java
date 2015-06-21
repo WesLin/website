@@ -1,4 +1,5 @@
-package com.metaedu.server.business.data.user;
+package com.metaedu.server.business.data.interfaces.user;
+
 
 import com.metaedu.server.business.user.User;
 
@@ -9,7 +10,7 @@ import com.metaedu.server.business.user.User;
  * @version 1.0
  * @since 2015.05.18
  */
-public interface IUserQuery {
+public interface IUserData {
 
 	/** 用登录信息获取一个用户实体
 	 * @param refIsGeneral 是否通用账号登录
@@ -26,6 +27,7 @@ public interface IUserQuery {
 	 * @return
 	 */
 	public User getUserById(String refUserId);
+
 	
 	
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import com.metaedu.server.business.common.MultiTypeNameOwner;
-import com.metaedu.server.business.education.EduSystemType;
+import com.metaedu.server.business.education.EduSystem;
 
 /** 机构或学校
  * @author Sam
@@ -119,19 +119,19 @@ public class Institution implements MultiTypeNameOwner<InstitutionName>, Seriali
 	}
 	
 	/** 学制类型集合 */
-	private ArrayList<EduSystemType> _eduSystemTypes = new ArrayList<EduSystemType>(); 
+	private ArrayList<EduSystem> _eduSystemTypes = new ArrayList<EduSystem>(); 
 	
 	/** 获取学制类型集合
 	 * @return
 	 */
-	public ArrayList<EduSystemType> getEduSystemTypes() {
+	public ArrayList<EduSystem> getEduSystemTypes() {
 		return this._eduSystemTypes;
 	}
 	
 	/** 设置学制类型集合
 	 * @param refTypes
 	 */
-	public void setEduSystemTypes(ArrayList<EduSystemType> refTypes) {
+	public void setEduSystemTypes(ArrayList<EduSystem> refTypes) {
 		this._eduSystemTypes = refTypes;
 	}
 	
@@ -182,6 +182,7 @@ public class Institution implements MultiTypeNameOwner<InstitutionName>, Seriali
 		this._createTime = refCreateTime;
 		this._updateTime = refUpdateTime;
 	}
+	
 	
 	
 	

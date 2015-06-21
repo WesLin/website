@@ -137,7 +137,7 @@ public class Character {
 	}
 	
 	/** 设置是否有效角色 */
-	public void setValid(boolean isValid) {
+	public void setIsValid(boolean isValid) {
 		this.isValid = isValid;
 	}
 
