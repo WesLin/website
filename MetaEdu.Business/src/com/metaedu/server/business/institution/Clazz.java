@@ -113,6 +113,19 @@ public class Clazz {
 	public Grade getBeginGrade() {
 		return Grade.getGrade(this.beginGradeType);
 	}
+	
+	/** 是否有效班级 */
+	private boolean isValid = true;
+
+	/** 获取是否有效班级 */
+	public boolean getIsValid() {
+		return isValid;
+	}
+
+	/** 设置是否有效班级 */
+	public void setValid(boolean isValid) {
+		this.isValid = isValid;
+	}
 
 	/** 创建时间 */
 	private Date createTime = new Date();

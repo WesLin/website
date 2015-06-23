@@ -87,6 +87,19 @@ public class User {
 		this.sex = refSex;
 	}
 	
+	/** 用户头像（Filefox ID）*/
+	private String avatar = "";
+	
+	/** 获取用户头像（Filefox ID）*/
+	public String getAvatar() {
+		return avatar;
+	}
+
+	/** 设置用户头像（Filefox ID）*/
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
 	/** 用户昵称 */
 	private String nickname = "";
 
