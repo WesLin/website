@@ -19,7 +19,7 @@
 
 	<!-- 服务器地址配置加载 -->
 	<bean id="serverProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:com/metaedu/business/data/hessian/server.properties"/>
+		<property name="location" value="classpath:com/metaedu/business/data/hessian/hessian-server.properties"/>
 	</bean>
 
 	<!-- education.IInstitutionQuery 实现 -->

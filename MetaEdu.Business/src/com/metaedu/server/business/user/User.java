@@ -1,5 +1,6 @@
 package com.metaedu.server.business.user;
 
+import java.io.Serializable;
 /** 用户类
  * @author Sam
  * @version 1.0
@@ -7,8 +8,10 @@ package com.metaedu.server.business.user;
  */
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
 
+	private static final long serialVersionUID = 2516261720714051988L;
+	
 	/** 用户主键 */
 	private String id;
 

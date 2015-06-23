@@ -9,7 +9,7 @@ import com.metaedu.server.business.user.User;
  * @version 1.0
  * @since 2015.05.18
  */
-public interface ISimpleGroupOpe {
+public interface IGroupExternalData {
 	
 	/** 创建业务群
 	 * @param refGroup

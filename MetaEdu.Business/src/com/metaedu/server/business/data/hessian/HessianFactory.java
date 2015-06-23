@@ -3,6 +3,8 @@ package com.metaedu.server.business.data.hessian;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.metaedu.server.utils.file.ApplicationContextUtils;
+
 /** 数据服务配置类
  * @author Sam
  * @version 1.0
@@ -20,7 +22,8 @@ public class HessianFactory {
 	
 	/** 静态方法 */
 	static {
-		ApplicationContext curContext = new ClassPathXmlApplicationContext("classpath:/com/metaedu/business/data/hessian/hessian-config.xml");
+		//ApplicationContext curContext = new ClassPathXmlApplicationContext("classpath:/com/metaedu/business/data/hessian/hessian-config.xml");
+		ApplicationContext curContext = ApplicationContextUtils.getApplicationContextByBackupXML("/WEB-INF/hessian-config.xml", "classpath:/com/metaedu/business/data/hessian/hessian-config.xml");
 		_context = curContext;
 	}
 	
