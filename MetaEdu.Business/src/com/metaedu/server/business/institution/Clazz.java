@@ -1,7 +1,9 @@
 package com.metaedu.server.business.institution;
 
+import java.util.Calendar;
 import java.util.Date;
 
+import com.metaedu.server.business.common.LanguageType;
 import com.metaedu.server.business.education.EduSystem;
 import com.metaedu.server.business.education.Grade;
 import com.metaedu.server.utils.text.HashUtils;
@@ -123,7 +125,7 @@ public class Clazz {
 	}
 
 	/** 设置是否有效班级 */
-	public void setValid(boolean isValid) {
+	public void setIsValid(boolean isValid) {
 		this.isValid = isValid;
 	}
 
@@ -152,6 +154,19 @@ public class Clazz {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
+	
+	/** 获取据此班级创建的群组名称
+	 * @return
+	 */
+	public String getGroupName() {
+		//int curYear = this.beginTime.get
+		Calendar ca = Calendar.getInstance();
+		ca.setTime(this.beginTime);
+		String curYear = String.valueOf(ca.get(Calendar.YEAR)).substring(2);
+		return curYear + "届 " + Grade.getGrade(this.getBeginGradeType()).getNameValue(LanguageType.SIMPLIFIED_CHINESE) + " " + this.getName();
+	}
+	
+	
 	
 	
 }

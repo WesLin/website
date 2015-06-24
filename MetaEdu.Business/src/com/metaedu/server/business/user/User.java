@@ -8,12 +8,19 @@ import java.io.Serializable;
  */
 import java.util.Date;
 
+import com.metaedu.server.utils.text.HashUtils;
+
+/** 用户类
+ * @author Sam
+ * @version 1.0
+ * @since 2015.06.16
+ */
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 2516261720714051988L;
 	
 	/** 用户主键 */
-	private String id;
+	private String id = HashUtils.getUuidCompact();
 
 	/** 获取用户主键 */
 	public String getId() {

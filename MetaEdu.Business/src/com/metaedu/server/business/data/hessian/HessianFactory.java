@@ -1,7 +1,6 @@
 package com.metaedu.server.business.data.hessian;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.metaedu.server.utils.file.ApplicationContextUtils;
 

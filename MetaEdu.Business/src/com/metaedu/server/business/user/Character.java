@@ -3,6 +3,7 @@ package com.metaedu.server.business.user;
 import java.util.Date;
 
 import com.metaedu.server.business.sharing.SharingLevel;
+import com.metaedu.server.utils.text.HashUtils;
 
 /** 角色
  * @author Sam
@@ -12,7 +13,7 @@ import com.metaedu.server.business.sharing.SharingLevel;
 public class Character {
 
 	/** 角色主键 */
-	private String id;
+	private String id = HashUtils.getUuidCompact();
 	
 	/** 获取角色主键 */
 	public String getId() {
@@ -25,7 +26,7 @@ public class Character {
 	}
 	
 	/** 关联用户编号 */
-	private String userId;
+	private String userId = "";
 	
 	/** 获取关联用户编号 */
 	public String getUserId() {
@@ -38,7 +39,7 @@ public class Character {
 	}
 
 	/** 关联机构编号 */
-	private String institutionId;
+	private String institutionId = "";
 	
 	/** 获取关联机构编号 */
 	public String getInstitutionId() {
@@ -51,7 +52,7 @@ public class Character {
 	}
 
 	/** 学号或者工号（管理员强制为 admin）*/
-	private String characterNumber;
+	private String characterNumber = "";
 	
 	/** 获取学号或者工号 */
 	public String getCharacterNumber() {
@@ -64,7 +65,7 @@ public class Character {
 	}
 	
 	/** 学号工号对应密码 */ 
-	private String characterPassword;
+	private String characterPassword = "123456";
 	
 	/** 获取学号工号对应密码 */
 	public String getCharacterPassword() {
@@ -103,7 +104,7 @@ public class Character {
 	}
 
 	/** 角色使用的邮件信息 */
-	private String email;
+	private String email = "";
 	
 	/** 获取角色使用的邮件信息 */
 	public String getEmail() {
@@ -116,7 +117,7 @@ public class Character {
 	}
 
 	/** 角色使用的手机信息 */
-	private String mobile;
+	private String mobile = "";
 	
 	/** 获取角色使用的手机信息 */
 	public String getMobile() {
@@ -142,7 +143,7 @@ public class Character {
 	}
 
 	/** 角色创建时间 */
-	private Date createTime;
+	private Date createTime = new Date();
 	
 	/** 获取角色创建时间 */
 	public Date getCreateTime() {
@@ -155,7 +156,7 @@ public class Character {
 	}
 	
 	/** 角色更新时间 */
-	private Date updateTime;
+	private Date updateTime = new Date();
 	
 	/** 获取角色更新时间 */
 	public Date getUpdateTime() {
