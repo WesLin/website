@@ -1,5 +1,6 @@
 package com.metaedu.server.business.data.hessian;
 
+import com.metaedu.server.business.data.interfaces.institution.IClazzData;
 import com.metaedu.server.business.data.interfaces.institution.IInstitutionData;
 import com.metaedu.server.business.data.interfaces.social.IGroupExternalData;
 import com.metaedu.server.business.data.interfaces.user.IUserData;
@@ -27,6 +28,15 @@ public class DataFactory {
 	public synchronized static IInstitutionData getInstitutionData() {
 		if (_institutionDataImpl == null) _institutionDataImpl = (IInstitutionData)HessianFactory.getFactory().getBean("InstitutionData");
 		return _institutionDataImpl;
+	}
+	
+	/** 机构学校基础数据接口单例 */
+	private static IClazzData _clazzDataImpl = null;
+	
+	/** 获取机构学校基础数据接口 */
+	public synchronized static IClazzData getClazzData() {
+		if (_clazzDataImpl == null) _clazzDataImpl = (IClazzData)HessianFactory.getFactory().getBean("ClazzData");
+		return _clazzDataImpl;
 	}
 	
 	/** 业务群数据接口单例 */
