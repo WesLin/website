@@ -12,7 +12,7 @@ import com.metaedu.server.business.common.MultiNameOwner;
  * @version 1.0
  * @since 2015.05.14
  */
-public class Grade implements MultiNameOwner<GradeName>, Serializable  {
+public class Grade implements MultiNameOwner<GradeName>, Serializable {
 	
 	private static final long serialVersionUID = -8761268139515566097L;
 	

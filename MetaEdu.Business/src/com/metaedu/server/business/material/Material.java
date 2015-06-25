@@ -1,5 +1,6 @@
 package com.metaedu.server.business.material;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import com.metaedu.server.utils.text.HashUtils;
@@ -9,8 +10,10 @@ import com.metaedu.server.utils.text.HashUtils;
  * @date 2015-06-25
  * @version 1.0.0
  */
-public class Material {
+public class Material implements Serializable {
 
+	private static final long serialVersionUID = 2921904059760536592L;
+	
 	/** 资料主键 */
 	public String id = HashUtils.getUuidCompact();
 

@@ -1,5 +1,6 @@
 package com.metaedu.server.business.institution;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -10,8 +11,10 @@ import com.metaedu.server.utils.text.HashUtils;
  * @version 1.0
  * @since 2015.05.18
  */
-public class Course {
+public class Course implements Serializable {
 
+	private static final long serialVersionUID = 9093519711108490614L;
+	
 	/** 课程主键 */
 	private String id = HashUtils.getUuidCompact();
 

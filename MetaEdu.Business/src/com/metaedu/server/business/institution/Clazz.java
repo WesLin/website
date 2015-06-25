@@ -1,5 +1,6 @@
 package com.metaedu.server.business.institution;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -13,8 +14,10 @@ import com.metaedu.server.utils.text.HashUtils;
  * @version 1.0
  * @since 2015.05.18
  */
-public class Clazz {
+public class Clazz implements Serializable {
 
+	private static final long serialVersionUID = 2000785229468705414L;
+	
 	/** 班级主键 UUID */
 	private String id = HashUtils.getUuidCompact();
 

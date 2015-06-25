@@ -1,5 +1,6 @@
 package com.metaedu.server.business.user;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import com.metaedu.server.business.sharing.SharingLevel;
@@ -10,8 +11,10 @@ import com.metaedu.server.utils.text.HashUtils;
  * @version 1.0
  * @since 2015.05.18
  */
-public class Character {
+public class Character implements Serializable {
 
+	private static final long serialVersionUID = -3246860686148840787L;
+	
 	/** 角色主键 */
 	private String id = HashUtils.getUuidCompact();
 	
