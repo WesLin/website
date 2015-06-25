@@ -1,5 +1,6 @@
 package com.metaedu.server.business.education;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,7 +12,9 @@ import com.metaedu.server.business.common.MultiNameOwner;
  * @version 1.0
  * @since 2015.05.14
  */
-public class Grade implements MultiNameOwner<GradeName> {
+public class Grade implements MultiNameOwner<GradeName>, Serializable  {
+	
+	private static final long serialVersionUID = -8761268139515566097L;
 	
 	/** 年级值：大陆托儿班 */
 	public static final int ID_CHINA_MAINLAND_YOU_1 = 101001;
