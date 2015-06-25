@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
+import com.metaedu.server.business.common.LanguageType;
 import com.metaedu.server.business.common.MultiTypeNameOwner;
+import com.metaedu.server.business.common.NameType;
 import com.metaedu.server.business.education.EduSystem;
 
 /** 机构或学校
@@ -49,6 +51,11 @@ public class Institution implements MultiTypeNameOwner<InstitutionName>, Seriali
 	 */
 	public void setNames(ArrayList<InstitutionName> refNames) {
 		this._names = refNames;
+	}
+	
+	/** 获取默认名称 */
+	public String getDefaultName() {
+		return this.getNameValue(LanguageType.SIMPLIFIED_CHINESE, NameType.FORMAL);
 	}
 	
 	/** 获取指定语言类型的名称对象集合

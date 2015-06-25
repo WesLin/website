@@ -1,6 +1,8 @@
 package com.metaedu.server.business.data.interfaces.user;
 
 
+import java.util.List;
+
 import com.metaedu.server.business.user.User;
 
 
@@ -22,16 +24,60 @@ public interface IUserData {
 	public User getUserByLoginInfo(Boolean isGeneral, String refInstitutionId, String refCharacterNumber, String refCharacterPassword);
 	
 	
-	/** 获取指定编号的用户
+	/** 获取指定编号的有效用户
 	 * @param refUserId 指定的用户编号
 	 * @return
 	 */
-	public User getUserById(String refUserId);
+	public User getValidUserById(String refUserId);
+	
+	
+	/** 添加一个带基本属性及机构、角色属性的用户
+	 * @param refSurname
+	 * @param refName
+	 * @param refSex
+	 * @param refInstitutionId
+	 * @param refCharacterNumber
+	 * @param refCharacterType
+	 * @return
+	 */
+	public User createSimpleCharacteredUser(String refSurname, String refName, int refSex, String refInstitutionId, String refCharacterNumber, int refCharacterType);
 
+	/** 获取指定班级编号的学生用户
+	 * @param refClazzId
+	 * @return
+	 */
+	public List<User> getStudentUsersByClazzId(String refClazzId);
 	
+	/** 获取指定班级编号的教师用户
+	 * @param refClazzId
+	 * @return
+	 */
+	public List<User> getTeacherUsersByClazzId(String refClazzId);
 	
+	/** 获取指定课程与机构编号的学生用户
+	 * @param refClazzId
+	 * @return
+	 */
+	public List<User> getStudentUsersByInstitutionAndCourseId(String refInstitutionId, String refCourseId);
 	
+	/** 获取指定课程与机构编号的教师用户
+	 * @param refInstitutionId
+	 * @param refCourseId
+	 * @return
+	 */
+	public List<User> getTeacherUsersByInstitutionAndCourseId(String refInstitutionId, String refCourseId);
 	
+	/** 获取指定课程编号的所有机构学生用户
+	 * @param refCourseId
+	 * @return
+	 */
+	public List<User> getStudentUsersByCourseId(String refCourseId);
+	
+	/** 获取指定课程编号的所有机构教师用户
+	 * @param refCourseId
+	 * @return
+	 */
+	public List<User> getTeacherUsersByCourseId(String refCourseId);
 	
 	
 }

@@ -12,7 +12,7 @@
 			<id>nexus-snapshots</id>
 			<name>nexus distribution snapshot repository</name>
 			<!-- 这里使用 /content/repositories/snapshots/ -->
-			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://192.168.18.7:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<build>

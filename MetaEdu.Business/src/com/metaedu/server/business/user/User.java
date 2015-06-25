@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.metaedu.server.utils.text.HashUtils;
+import com.metaedu.server.utils.text.TimeUtils;
 
 /** 用户类
  * @author Sam
@@ -82,6 +83,19 @@ public class User implements Serializable {
 	/** 设置用户姓 */
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+	
+	/** 生日 */
+	private Date birthday = TimeUtils.getDateFromString("1900-01-01 00:00:00");
+	
+	/** 获取生日 */
+	public Date getBirthday() {
+		return this.birthday;
+	}
+	
+	/** 设置生日 */
+	public void setBirthday(Date refBirthday) {
+		this.birthday = refBirthday;
 	}
 	
 	/** 用户性别，默认未知 */

@@ -13,15 +13,13 @@ public interface IInstitutionData {
 	 * @param refId 机构实例的编号
 	 * @return
 	 */
-	public Institution getInstitutionById(String refId);
+	public Institution getInstitutionById(String refInstitutionId);
 	
 	/** 创建一个机构
 	 * @param refInstitution
 	 * @return
 	 */
-	public boolean createInstitution(Institution refInstitution);
-	
-	
+	//public boolean createInstitution(Institution refInstitution);
 	
 	
 }

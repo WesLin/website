@@ -14,7 +14,7 @@ public class InstitutionName extends MultiTypeName {
 	 * @param refNameType 命名类型
 	 * @param refLanguageType 所用语种
 	 */
-	protected InstitutionName(String refName, int refNameType, int refLanguageType) {
+	public InstitutionName(String refName, int refNameType, int refLanguageType) {
 		super(refName, refNameType, refLanguageType);
 	}
 	
@@ -24,7 +24,7 @@ public class InstitutionName extends MultiTypeName {
 	 * @param refNameType 命名类型
 	 * @param refLanguageType 所用语种
 	 */
-	protected InstitutionName(String refId, String refName, int refNameType, int refLanguageType) {
+	public InstitutionName(String refId, String refName, int refNameType, int refLanguageType) {
 		super(refId, refName, refNameType, refLanguageType);
 	}
 	
