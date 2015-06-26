@@ -18,14 +18,29 @@
 	</bean> -->
 
 	<!-- 服务器地址配置加载 -->
-	<bean id="serverProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<!-- <bean id="serverProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:com/metaedu/business/data/hessian/hessian-server.properties"/>
-	</bean>
+	</bean> -->
 
-	<!-- education.IInstitutionQuery 实现 -->
-	<bean id="IInstitutionQuery" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
-		<property name="serviceUrl" value="${webdata}InstitutionQuery" />
-		<property name="serviceInterface" value="com.metaedu.business.data.education.IInstitutionQuery" />
+	<!-- IUserData 远程服务配置 -->
+	<bean id="UserData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/webdata/userdata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.user.IUserData" />
+	</bean>
+	<!-- IInstitutionData 远程服务配置 -->
+	<bean id="InstitutionData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/webdata/institutiondata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.IInstitutionData" />
+	</bean>
+	<!-- IClazzData 远程服务配置 -->
+	<bean id="ClazzData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/webdata/clazzdata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.IClazzData" />
+	</bean>
+	<!-- ICourseData 远程服务配置 -->
+	<bean id="CourseData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/webdata/coursedata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.ICourseData" />
 	</bean>
 	
 </beans>
