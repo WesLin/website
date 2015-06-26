@@ -77,7 +77,7 @@ public interface ICourseData {
 	 * @param refUserId
 	 * @return
 	 */
-	public boolean addCourseStudent(String refCourseId, String refInstitutionId, User refUser);
+	//public boolean addCourseStudent(String refCourseId, String refInstitutionId, User refUser);
 	
 	/** 移除同个机构内的来自相关班级的学生
 	 * @param refCourseId
@@ -85,7 +85,7 @@ public interface ICourseData {
 	 * @param refUserId
 	 * @return
 	 */
-	public boolean removeCourseStudent(String refCourseId, String refInstitutionId, String refUserId);
+	//public boolean removeCourseStudent(String refCourseId, String refInstitutionId, String refUserId);
 	
 	
 	
