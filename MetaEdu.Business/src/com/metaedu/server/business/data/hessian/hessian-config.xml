@@ -54,4 +54,10 @@
 		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.social.IGroupExternalData" />
 	</bean>
 	
+	<!-- IComplexExternalData 远程服务配置 -->
+	<bean id="ComplexExternalData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/complex/complexexternaldata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.complex.IComplexExternalData" />
+	</bean>
+	
 </beans>

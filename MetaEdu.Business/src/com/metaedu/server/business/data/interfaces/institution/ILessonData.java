@@ -15,5 +15,24 @@ public interface ILessonData {
 	 */
 	public Lesson getValidLessonById(String refLessonId);
 	
+	/** 创建课次
+	 * @param refLesson
+	 * @return
+	 */
+	public boolean createLesson(Lesson refLesson);
+	
+	/** 更新课次
+	 * @param refLesson
+	 * @return
+	 */
+	public boolean updateLesson(Lesson refLesson);
+	
+	/** 移除课次
+	 * @param refLessonId
+	 * @return
+	 */
+	public boolean removeLesson(String refLessonId);
+	
+	
 	
 }
