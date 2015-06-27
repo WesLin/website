@@ -12,13 +12,21 @@ import com.metaedu.server.business.complex.ParticipantOpeUnit;
  */
 public interface IComplexExternalData {
 
-	/** 初始化 Complex 会话 */
+	/** 初始化 Complex 会话
+	 * @param refPackage
+	 */
 	public void initComplex(ComplexInitPackage refPackage);
 	
-	/** 会话参与者变更操作，增加或者删除 */
+	/** 会话参与者变更操作，增加或者删除
+	 * @param refComplexId
+	 * @param refUnit
+	 */
 	public void updateParticipant(String refComplexId, ParticipantOpeUnit refUnit);
 	
-	/** 变更会话结束时间 */
+	/** 变更会话结束时间
+	 * @param refComplexId
+	 * @param refDate
+	 */
 	public void updateOverTime(String refComplexId, Date refDate);
 	
 }

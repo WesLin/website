@@ -1,8 +1,10 @@
 package com.metaedu.server.business.data.hessian;
 
+import com.metaedu.server.business.data.interfaces.complex.IComplexExternalData;
 import com.metaedu.server.business.data.interfaces.institution.IClazzData;
 import com.metaedu.server.business.data.interfaces.institution.ICourseData;
 import com.metaedu.server.business.data.interfaces.institution.IInstitutionData;
+import com.metaedu.server.business.data.interfaces.institution.ILessonData;
 import com.metaedu.server.business.data.interfaces.social.IGroupExternalData;
 import com.metaedu.server.business.data.interfaces.user.IUserData;
 
@@ -49,6 +51,16 @@ public class DataFactory {
 		return _courseDataImpl;
 	}
 	
+	/** 课次管理基础数据接口单例 */
+	private static ILessonData _lessonDataImpl = null;
+	
+	/** 获取课程管理基础数据接口 */
+	public synchronized static ILessonData getLessonData() {
+		if (_lessonDataImpl == null) _lessonDataImpl = (ILessonData)HessianFactory.getFactory().getBean("LessonData");
+		return _lessonDataImpl;
+	}
+
+	
 	/** 业务群数据接口单例 */
 	private static IGroupExternalData _groupExternalDataImpl = null;
 	
@@ -59,6 +71,14 @@ public class DataFactory {
 	}
 	
 	
+	/** Complex 会话数据接口单例 */
+	private static IComplexExternalData _complexExternalDataImpl = null;
+	
+	/** 获取 Complex 数据接口单例 */
+	public synchronized static IComplexExternalData getComplexExternalData() {
+		if (_complexExternalDataImpl == null) _complexExternalDataImpl = (IComplexExternalData)HessianFactory.getFactory().getBean("ComplexExternalData");
+		return _complexExternalDataImpl;
+	}
 	
 	
 
