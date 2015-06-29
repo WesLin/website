@@ -42,7 +42,7 @@ public class Course implements Serializable {
 	}
 	
 	/** 科目主键 */
-	public String subjectId = "";
+	private String subjectId = "";
 
 	/** 获取科目主键 */
 	public String getSubjectId() {
