@@ -1,5 +1,7 @@
 package com.metaedu.server.business.user;
 
+import java.io.Serializable;
+
 import com.metaedu.server.business.user.CharacterType;
 import com.metaedu.server.business.user.UserSexType;
 
@@ -9,8 +11,10 @@ import com.metaedu.server.business.user.UserSexType;
  * @version 1.0
  * @since 2015.05.14
  */
-public class UserSummary {
+public class UserSummary implements Serializable {
 
+	private static final long serialVersionUID = -3884662975263772450L;
+	
 	/** 用户编号 */
 	private String userId = "";
 

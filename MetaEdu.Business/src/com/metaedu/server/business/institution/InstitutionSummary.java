@@ -1,12 +1,16 @@
 package com.metaedu.server.business.institution;
 
+import java.io.Serializable;
+
 /** 机构或学校信息摘要
  * @author Sam
  * @version 1.0
  * @since 2015.05.18
  */
-public class InstitutionSummary {
+public class InstitutionSummary implements Serializable {
 
+	private static final long serialVersionUID = 3899882988303017711L;
+	
 	/** 机构编号 */
 	private String id = "";
 
