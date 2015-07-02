@@ -3,6 +3,7 @@ package com.metaedu.server.business.data.interfaces.complex;
 import java.util.Date;
 
 import com.metaedu.server.business.complex.ComplexInitPackage;
+import com.metaedu.server.business.complex.ComplexMaterialInform;
 import com.metaedu.server.business.complex.ParticipantOpeUnit;
 
 /** Complex 实时数据接口
@@ -28,5 +29,10 @@ public interface IComplexExternalData {
 	 * @param refDate
 	 */
 	public void updateOverTime(String refComplexId, Date refDate);
+	
+	/** 推送文件转换通知
+	 * @param refInform
+	 */
+	public void pushMaterialInform(ComplexMaterialInform refInform);
 	
 }
