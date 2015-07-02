@@ -47,6 +47,11 @@
 		<property name="serviceUrl" value="http://localhost:8080/webdata/lessondata" />
 		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.ILessonData" />
 	</bean>
+	<!-- IMaterialData 远程服务配置 -->
+	<bean id="MaterialData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/webdata/materialdata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.material.IMaterialData" />
+	</bean>
 	
 	<!-- IGroupExternalData 远程服务配置 -->
 	<bean id="GroupExternalData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">

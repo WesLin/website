@@ -5,6 +5,7 @@ import com.metaedu.server.business.data.interfaces.institution.IClazzData;
 import com.metaedu.server.business.data.interfaces.institution.ICourseData;
 import com.metaedu.server.business.data.interfaces.institution.IInstitutionData;
 import com.metaedu.server.business.data.interfaces.institution.ILessonData;
+import com.metaedu.server.business.data.interfaces.material.IMaterialData;
 import com.metaedu.server.business.data.interfaces.social.IGroupExternalData;
 import com.metaedu.server.business.data.interfaces.user.IUserData;
 
@@ -58,6 +59,15 @@ public class DataFactory {
 	public synchronized static ILessonData getLessonData() {
 		if (_lessonDataImpl == null) _lessonDataImpl = (ILessonData)HessianFactory.getFactory().getBean("LessonData");
 		return _lessonDataImpl;
+	}
+	
+	/** 资料数据接口单例 */
+	private static IMaterialData _materialDataImpl = null;
+	
+	/** 获取资料基础数据接口 */
+	public synchronized static IMaterialData getMaterialData() {
+		if (_materialDataImpl == null) _materialDataImpl = (IMaterialData)HessianFactory.getFactory().getBean("MaterialData");
+		return _materialDataImpl;
 	}
 
 	

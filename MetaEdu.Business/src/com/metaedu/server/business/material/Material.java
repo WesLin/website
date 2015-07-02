@@ -3,6 +3,7 @@ package com.metaedu.server.business.material;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.metaedu.server.business.sharing.SharingLevel;
 import com.metaedu.server.utils.text.HashUtils;
 
 /** 资料类
@@ -40,6 +41,32 @@ public class Material implements Serializable {
 		this.filefoxId = filefoxId;
 	}
 	
+	/** 所属用户主键 */
+	private String userId = "";
+	
+	/** 获取所属用户主键 */
+	public String getUserId() {
+		return userId;
+	}
+
+	/** 设置所属用户主键 */
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	
+	/** 共享级别，默认私有 */
+	private int sharingLevel = SharingLevel.PRIVATE;
+	
+	/** 获取共享级别 */
+	public int getSharingLevel() {
+		return sharingLevel;
+	}
+
+	/** 设置共享级别 */
+	public void setSharingLevel(int sharingLevel) {
+		this.sharingLevel = sharingLevel;
+	}
+
 	/** 文件名称 */
 	private String name = "";
 
@@ -92,10 +119,10 @@ public class Material implements Serializable {
 		this.size = size;
 	}
 	
-	/** 资料明细（转换后数据）*/
+	/** 资料明细（转换用明细）*/
 	private String detail = "";
 
-	/** 获取资料明细（转换后数据）*/
+	/** 获取资料明细（转换用明细）*/
 	public String getDetail() {
 		return detail;
 	}
@@ -105,6 +132,32 @@ public class Material implements Serializable {
 		this.detail = detail;
 	}
 	
+	/** 转换状态 */
+	private String status = "";
+	
+	/** 获取转换状态 */
+	public String getStatus() {
+		return status;
+	}
+
+	/** 设置转换状态 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	/** 页数 */
+	private int page = 0;
+	
+	/** 获取页数 */
+	public int getPage() {
+		return page;
+	}
+
+	/** 设置页数 */
+	public void setPage(int page) {
+		this.page = page;
+	}
+
 	/** 是否有效 */
 	public boolean isValid = true;
 
