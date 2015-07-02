@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.metaedu.server.business.user.Character;
 import com.metaedu.server.business.user.User;
+import com.metaedu.server.business.user.UserSummary;
 
 
 
@@ -40,6 +41,13 @@ public interface IUserData {
 	 */
 	public Character getCharacter(String refInstitutionId, String refUserId, int refCharacterType);
 	
+	
+	/** 获取指定机构和工号或学号的用户摘要信息（1.0 版本简化登录用）
+	 * @param refInstitutionId
+	 * @param refCharacterNumber
+	 * @return
+	 */
+	public UserSummary getUserSummary(String refInstitutionId, String refCharacterNumber);
 	
 	/** 添加一个带基本属性及机构、角色属性的用户
 	 * @param refSurname
