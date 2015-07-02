@@ -107,15 +107,15 @@ public class Material implements Serializable {
 	}
 	
 	/** 文件大小 */
-	private int size = 0;
+	private long size = 0l;
 
 	/** 获取文件大小 */
-	public int getSize() {
+	public long getSize() {
 		return size;
 	}
 
 	/** 设置文件大小 */
-	public void setSize(int size) {
+	public void setSize(long size) {
 		this.size = size;
 	}
 	
