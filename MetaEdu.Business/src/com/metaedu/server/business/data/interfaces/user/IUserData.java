@@ -3,6 +3,7 @@ package com.metaedu.server.business.data.interfaces.user;
 
 import java.util.List;
 
+import com.metaedu.server.business.user.Character;
 import com.metaedu.server.business.user.User;
 
 
@@ -29,6 +30,15 @@ public interface IUserData {
 	 * @return
 	 */
 	public User getValidUserById(String refUserId);
+	
+	
+	/** 获取指定机构内用户的指定类型角色
+	 * @param refInstitutionId
+	 * @param refUserId
+	 * @param refCharacterType
+	 * @return
+	 */
+	public Character getCharacter(String refInstitutionId, String refUserId, int refCharacterType);
 	
 	
 	/** 添加一个带基本属性及机构、角色属性的用户
