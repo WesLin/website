@@ -102,6 +102,21 @@ public class ComplexMaterialInform implements Serializable {
 		this.page = page;
 	}
 	
+	/** 文档对应的课程编号 */
+	private String complexId = "";
+
+	/** 文档对应的课程编号 */
+	public String getComplexId() {
+		return complexId;
+	}
+
+	/** 文档对应的课程编号 */
+	public void setComplexId(String complexId) {
+		this.complexId = complexId;
+	}
+	
+	
+	
 	
 	
 	
