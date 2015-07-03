@@ -50,6 +50,19 @@ public class ComplexMaterialInform implements Serializable {
 		this.suffix = refSuffix;
 	}
 	
+	/** 业务服务中的资料编号 */
+	private String id="";
+	
+	/** 业务服务中的资料编号 */
+	public String getId() {
+		return id;
+	}
+
+	/** 业务服务中的资料编号 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	/** 文件管理编号 */
 	private String filefoxId = "";
 
