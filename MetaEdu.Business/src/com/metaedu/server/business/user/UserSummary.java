@@ -40,6 +40,19 @@ public class UserSummary implements Serializable {
 	public void setInstitutionId(String institutionId) {
 		this.institutionId = institutionId;
 	}
+	
+	/** 所属机构名称 */
+	private String institutionName = "";
+	
+	/** 所属机构名称 */
+	public String getInstitutionName() {
+		return institutionName;
+	}
+
+	/** 所属机构名称 */
+	public void setInstitutionName(String institutionName) {
+		this.institutionName = institutionName;
+	}
 
 	/** 用户角色类型 */
 	private int characterType = CharacterType.STUDENT;
@@ -92,6 +105,9 @@ public class UserSummary implements Serializable {
 	public void setSexType(int sexType) {
 		this.sexType = sexType;
 	}
+
+	
+	
 	
 	
 }
