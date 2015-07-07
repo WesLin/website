@@ -3,7 +3,7 @@ package com.metaedu.server.business.institution;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.metaedu.server.utils.text.HashUtils;
+import com.metaedu.server.utils.text.TimeUtils;
 
 /** 课次类
  * @author Sam
@@ -14,8 +14,22 @@ public class Lesson implements Serializable {
 
 	private static final long serialVersionUID = 3352290446456449183L;
 
+	/** 构造函数
+	 * @param refIsInit 是否初始化
+	 * @param refLessonOrInstitutionId 课次主键或对应的机构主键
+	 */
+	public Lesson(boolean refIsInit, String refLessonOrInstitutionId) {
+		if (refIsInit) { // 如果是新建
+			this.courseId = refLessonOrInstitutionId;
+			this.id = refLessonOrInstitutionId + "-" + TimeUtils.getNebulaTimestamp(new Date()); // 33位
+		} else { // 如果是赋值
+			this.id = refLessonOrInstitutionId;
+		}
+	}
+	
 	/** 课次主键 */
-	private String id = HashUtils.getUuidCompact();
+//	private String id = HashUtils.getUuidCompact();
+	private String id = "";
 
 	/** 获取课次主键 */
 	public String getId() {
@@ -23,9 +37,9 @@ public class Lesson implements Serializable {
 	}
 
 	/** 设置课次主键 */
-	public void setId(String id) {
-		this.id = id;
-	}
+//	public void setId(String id) {
+//		this.id = id;
+//	}
 	
 	/** 关联课程主键 */
 	private String courseId = "";

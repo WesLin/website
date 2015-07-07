@@ -7,7 +7,7 @@ import java.util.Date;
 import com.metaedu.server.business.common.LanguageType;
 import com.metaedu.server.business.education.EduSystem;
 import com.metaedu.server.business.education.Grade;
-import com.metaedu.server.utils.text.HashUtils;
+import com.metaedu.server.utils.text.TimeUtils;
 
 /** 班级类
  * @author Sam
@@ -18,8 +18,23 @@ public class Clazz implements Serializable {
 
 	private static final long serialVersionUID = 2000785229468705414L;
 	
+	
+	/** 构造函数
+	 * @param refIsInit 是初始化还是赋值
+	 * @param refInstitutionId 机构编号
+	 */
+	public Clazz(boolean refIsInit, String refInstitutionOrClazzId) {
+		if (refIsInit) { // 如果是新建
+			this.institutionId = refInstitutionOrClazzId;
+			this.id = this.institutionId + "-" + TimeUtils.getNebulaTimestamp(new Date());
+		} else { // 如果是赋值
+			this.id = refInstitutionOrClazzId;
+		}
+	}
+	
 	/** 班级主键 UUID */
-	private String id = HashUtils.getUuidCompact();
+	//private String id = HashUtils.getUuidCompact();
+	private String id = "";
 
 	/** 获取班级主键 UUID */
 	public String getId() {

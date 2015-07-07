@@ -1,14 +1,8 @@
 package com.metaedu.server.business.user;
 
 import java.io.Serializable;
-/** 用户类
- * @author Sam
- * @version 1.0
- * @since 2015.05.18
- */
 import java.util.Date;
 
-import com.metaedu.server.utils.text.HashUtils;
 import com.metaedu.server.utils.text.TimeUtils;
 
 /** 用户类
@@ -21,7 +15,8 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 2516261720714051988L;
 	
 	/** 用户主键 */
-	private String id = HashUtils.getUuidCompact();
+	//private String id = HashUtils.getUuidCompact();
+	private String id = TimeUtils.getNebulaTimestamp(new Date());
 
 	/** 获取用户主键 */
 	public String getId() {

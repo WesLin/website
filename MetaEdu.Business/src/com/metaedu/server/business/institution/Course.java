@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.metaedu.server.utils.text.HashUtils;
+import com.metaedu.server.utils.text.TimeUtils;
 
 /** 班级类
  * @author Sam
@@ -15,8 +15,22 @@ public class Course implements Serializable {
 
 	private static final long serialVersionUID = 9093519711108490614L;
 	
+	/** 构造函数
+	 * @param refIsInit 是否新建
+	 * @param refInstitutionOrCourseId 机构或者课程主键
+	 */
+	public Course(boolean refIsInit, String refInstitutionOrCourseId) {
+		if (refIsInit) { // 如果是新建
+			this.id = refInstitutionOrCourseId + "-" + TimeUtils.getNebulaTimestamp(new Date());
+			this.institutionId = refInstitutionOrCourseId;
+		} else { // 如果是赋值
+			this.id = refInstitutionOrCourseId;
+		}
+	}
+	
 	/** 课程主键 */
-	private String id = HashUtils.getUuidCompact();
+	//private String id = HashUtils.getUuidCompact();
+	private String id = "";
 
 	/** 获取课程主键 */
 	public String getId() {
