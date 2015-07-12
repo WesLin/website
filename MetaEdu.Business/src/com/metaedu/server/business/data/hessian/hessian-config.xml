@@ -27,30 +27,41 @@
 		<property name="serviceUrl" value="http://localhost:8080/webdata/userdata" />
 		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.user.IUserData" />
 	</bean>
+	
 	<!-- IInstitutionData 远程服务配置 -->
 	<bean id="InstitutionData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
 		<property name="serviceUrl" value="http://localhost:8080/webdata/institutiondata" />
 		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.IInstitutionData" />
 	</bean>
+	
 	<!-- IClazzData 远程服务配置 -->
 	<bean id="ClazzData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
 		<property name="serviceUrl" value="http://localhost:8080/webdata/clazzdata" />
-		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.IClazzData" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.education.IClazzData" />
 	</bean>
+	
 	<!-- ICourseData 远程服务配置 -->
 	<bean id="CourseData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
 		<property name="serviceUrl" value="http://localhost:8080/webdata/coursedata" />
-		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.ICourseData" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.education.ICourseData" />
 	</bean>
+	
 	<!-- ILessonData 远程服务配置 -->
 	<bean id="LessonData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
 		<property name="serviceUrl" value="http://localhost:8080/webdata/lessondata" />
-		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.institution.ILessonData" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.education.ILessonData" />
 	</bean>
+	
 	<!-- IMaterialData 远程服务配置 -->
 	<bean id="MaterialData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
 		<property name="serviceUrl" value="http://localhost:8080/webdata/materialdata" />
 		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.material.IMaterialData" />
+	</bean>
+	
+	<!-- IMetaWebData 远程服务配置 -->
+	<bean id="MetaWebData" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="http://localhost:8080/webdata/metawebdata" />
+		<property name="serviceInterface" value="com.metaedu.server.business.data.interfaces.metaweb.IMetaWebData" />
 	</bean>
 	
 	<!-- IGroupExternalData 远程服务配置 -->

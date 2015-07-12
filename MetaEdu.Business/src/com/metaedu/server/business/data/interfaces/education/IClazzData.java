@@ -1,8 +1,8 @@
-package com.metaedu.server.business.data.interfaces.institution;
+package com.metaedu.server.business.data.interfaces.education;
 
 import java.util.List;
 
-import com.metaedu.server.business.institution.Clazz;
+import com.metaedu.server.business.education.Clazz;
 import com.metaedu.server.business.user.User;
 
 /** 班级基础数据接口

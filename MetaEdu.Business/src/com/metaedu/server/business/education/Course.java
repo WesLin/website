@@ -1,4 +1,4 @@
-package com.metaedu.server.business.institution;
+package com.metaedu.server.business.education;
 
 import java.io.Serializable;
 import java.util.Calendar;
@@ -55,17 +55,17 @@ public class Course implements Serializable {
 		this.institutionId = institutionId;
 	}
 	
-	/** 科目主键 */
-	private String subjectId = "";
+	/** 科目类型 */
+	private String subjectType = "";
 
-	/** 获取科目主键 */
-	public String getSubjectId() {
-		return subjectId;
+	/** 获取科目类型 */
+	public String getSubjectType() {
+		return subjectType;
 	}
 
-	/** 设置科目主键 */
-	public void setSubjectId(String subjectId) {
-		this.subjectId = subjectId;
+	/** 设置科目类型 */
+	public void setSubjectType(String subjectType) {
+		this.subjectType = subjectType;
 	}
 	
 	/** 课程名称 */

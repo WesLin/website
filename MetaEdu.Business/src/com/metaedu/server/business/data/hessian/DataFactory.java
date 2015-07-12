@@ -1,11 +1,12 @@
 package com.metaedu.server.business.data.hessian;
 
 import com.metaedu.server.business.data.interfaces.complex.IComplexExternalData;
-import com.metaedu.server.business.data.interfaces.institution.IClazzData;
-import com.metaedu.server.business.data.interfaces.institution.ICourseData;
+import com.metaedu.server.business.data.interfaces.education.IClazzData;
+import com.metaedu.server.business.data.interfaces.education.ICourseData;
+import com.metaedu.server.business.data.interfaces.education.ILessonData;
 import com.metaedu.server.business.data.interfaces.institution.IInstitutionData;
-import com.metaedu.server.business.data.interfaces.institution.ILessonData;
 import com.metaedu.server.business.data.interfaces.material.IMaterialData;
+import com.metaedu.server.business.data.interfaces.metaweb.IMetaWebData;
 import com.metaedu.server.business.data.interfaces.social.IGroupExternalData;
 import com.metaedu.server.business.data.interfaces.user.IUserData;
 
@@ -91,6 +92,13 @@ public class DataFactory {
 	}
 	
 	
-
+	/** Meta 站点数据接口单例 */
+	private static IMetaWebData _metaWebDataImpl = null;
+	
+	/** 获取 Meta 站点数据接口单例 */
+	public synchronized static IMetaWebData getMetaWebData() {
+		if (_metaWebDataImpl == null) _metaWebDataImpl = (IMetaWebData)HessianFactory.getFactory().getBean("MetaWebData");
+		return _metaWebDataImpl;
+	}
 	
 }

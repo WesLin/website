@@ -2,7 +2,6 @@ package com.metaedu.server.business.education;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import com.metaedu.server.business.common.Area;
 import com.metaedu.server.business.common.LanguageType;
@@ -182,17 +181,25 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 	
 	
 	/** 静态学制存储表 */
-	private static HashMap<Integer, EduSystem> systemMap = new HashMap<Integer, EduSystem>();
+	private static ArrayList<EduSystem> eduSystemList = new ArrayList<EduSystem>();
+	
+	/** 获取所有的学制信息 */
+	public static ArrayList<EduSystem> getAllEduSystems() {
+		return eduSystemList;
+	}
 	
 	/** 获取指定编号的学制 */
 	public static EduSystem getEdySystem(Integer refSystemId) {
-		return systemMap.get(refSystemId);
+		for (EduSystem curSys : eduSystemList) {
+			if (curSys.getId() == refSystemId) return curSys;
+		}
+		return null;
 	}
 	
 	/** 静态执行 */
 	static {
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN = new EduSystem(EduSystem.ID_CHINA_MAINLAND_YOUERYUAN);
-		systemMap.put(EduSystem.ID_CHINA_MAINLAND_YOUERYUAN, EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN);
+		eduSystemList.add(EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN);
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN.addName(new EduSystemName("幼儿园（大陆）", LanguageType.SIMPLIFIED_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN.addName(new EduSystemName("幼稚園（大陸）", LanguageType.TRADTIONAL_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN.addName(new EduSystemName("Kindergarden And Pre-K (China Mainland)", LanguageType.ENGLISH));
@@ -202,7 +209,7 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN.addGrade(Grade.GRADE_CHINA_MAINLAND_YOU_4);
 		
 		EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE = new EduSystem(EduSystem.ID_CHINA_MAINLAND_XIAOXUE);
-		systemMap.put(EduSystem.ID_CHINA_MAINLAND_XIAOXUE, EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE);
+		eduSystemList.add(EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE);
 		EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE.addName(new EduSystemName("小学（大陆六年制）", LanguageType.SIMPLIFIED_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE.addName(new EduSystemName("小學（大陸六年制）", LanguageType.TRADTIONAL_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE.addName(new EduSystemName("Grade 1-6 (China Mainland)", LanguageType.ENGLISH));
@@ -214,7 +221,7 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 		EduSystem.SYSTEM_CHINA_MAINLAND_XIAOXUE.addGrade(Grade.GRADE_CHINA_MAINLAND_GRADE_6);
 		
 		EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG = new EduSystem(EduSystem.ID_CHINA_MAINLAND_CHUZHONG);
-		systemMap.put(EduSystem.ID_CHINA_MAINLAND_CHUZHONG, EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG);
+		eduSystemList.add(EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG);
 		EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG.addName(new EduSystemName("初中（大陆三年制）", LanguageType.SIMPLIFIED_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG.addName(new EduSystemName("初中（大陸三年制）", LanguageType.TRADTIONAL_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG.addName(new EduSystemName("Grade 7-9 (China Mainland)", LanguageType.ENGLISH));
@@ -223,7 +230,7 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 		EduSystem.SYSTEM_CHINA_MAINLAND_CHUZHONG.addGrade(Grade.GRADE_CHINA_MAINLAND_CHU_3);
 		
 		EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG = new EduSystem(EduSystem.ID_CHINA_MAINLAND_GAOZHONG);
-		systemMap.put(EduSystem.ID_CHINA_MAINLAND_GAOZHONG, EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG);
+		eduSystemList.add(EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG);
 		EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG.addName(new EduSystemName("高中（大陆三年制）", LanguageType.SIMPLIFIED_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG.addName(new EduSystemName("高中（大陸三年制）", LanguageType.TRADTIONAL_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG.addName(new EduSystemName("Grade 10-12 (China Mainland)", LanguageType.ENGLISH));
@@ -232,7 +239,7 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 		EduSystem.SYSTEM_CHINA_MAINLAND_GAOZHONG.addGrade(Grade.GRADE_CHINA_MAINLAND_GAO_3);
 		
 		EduSystem.SYSTEM_CHINA_MAINLAND_DAXUE = new EduSystem(EduSystem.ID_CHINA_MAINLAND_DAXUE);
-		systemMap.put(EduSystem.ID_CHINA_MAINLAND_DAXUE, EduSystem.SYSTEM_CHINA_MAINLAND_DAXUE);
+		eduSystemList.add(EduSystem.SYSTEM_CHINA_MAINLAND_DAXUE);
 		EduSystem.SYSTEM_CHINA_MAINLAND_DAXUE.addName(new EduSystemName("本科（大陆）", LanguageType.SIMPLIFIED_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_DAXUE.addName(new EduSystemName("本科（大陸）", LanguageType.TRADTIONAL_CHINESE));
 		EduSystem.SYSTEM_CHINA_MAINLAND_DAXUE.addName(new EduSystemName("College / University (China Mainland)", LanguageType.ENGLISH));

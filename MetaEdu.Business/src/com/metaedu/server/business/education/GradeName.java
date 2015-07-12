@@ -9,7 +9,7 @@ import com.metaedu.server.business.common.MultiName;
  * @version 1.0
  * @since 2015.05.14
  */
-public class GradeName extends MultiName implements Serializable  {
+public class GradeName extends MultiName implements Serializable {
 	
 	private static final long serialVersionUID = 2372477696907378179L;
 

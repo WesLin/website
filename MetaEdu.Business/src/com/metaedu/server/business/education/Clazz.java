@@ -1,12 +1,13 @@
-package com.metaedu.server.business.institution;
+package com.metaedu.server.business.education;
 
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.metaedu.server.business.common.BasicValue;
 import com.metaedu.server.business.common.LanguageType;
-import com.metaedu.server.business.education.EduSystem;
-import com.metaedu.server.business.education.Grade;
+import com.metaedu.server.business.finance.Currency;
+import com.metaedu.server.business.sharing.SharingLevel;
 import com.metaedu.server.utils.text.TimeUtils;
 
 /** 班级类
@@ -85,6 +86,110 @@ public class Clazz implements Serializable {
 		this.clazzType = clazzType;
 	}
 	
+	/** 是否选修班级 */
+	private boolean isSelective = false;
+	
+	/** 是否选修班级 */
+	public boolean getIsSelective() {
+		return isSelective;
+	}
+
+	/** 是否选修班级 */
+	public void setIsSelective(boolean refIsSelective) {
+		this.isSelective = refIsSelective;
+	}
+	
+	/** 开放报名时间，仅选修班需要设置，默认无开放时间 */
+	private Date openTime = BasicValue.UNDEFINED_DATE;
+	
+	/** 开放报名时间，仅选修班需要设置 */
+	public Date getOpenTime() {
+		return openTime;
+	}
+
+	/** 开放报名时间，仅选修班需要设置 */
+	public void setOpenTime(Date openTime) {
+		this.openTime = openTime;
+	}
+	
+	/** 关闭报名时间，仅选修班需要设置，默认无开放时间 */
+	private Date closeTime = BasicValue.UNDEFINED_DATE;
+	
+	/** 关闭报名时间，仅选修班需要设置 */
+	public Date getCloseTime() {
+		return closeTime;
+	}
+
+	/** 关闭报名时间，仅选修班需要设置 */
+	public void setCloseTime(Date closeTime) {
+		this.closeTime = closeTime;
+	}
+	
+	/** 报班人数限制，默认无（或跟随机构默认人数上限）*/
+	private int limit = 0;
+	
+	/** 报班人数限制，默认无（或跟随机构默认人数上限）*/
+	public int getLimit() {
+		return limit;
+	}
+
+	/** 报班人数限制，默认无（或跟随机构默认人数上限）*/
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+	
+	/** 结算货币类型，默认人民币 */
+	private int currencyType = Currency.ID_CNY;
+	
+	/** 结算货币类型 */
+	public int getCurrencyType() {
+		return currencyType;
+	}
+
+	/** 结算货币类型 */
+	public void setCurrencyType(int currencyType) {
+		this.currencyType = currencyType;
+	}
+	
+	/** 购买费用，以分计算 */
+	private int cost = 0;
+	
+	/** 购买费用，以分计算 */
+	public int getCost() {
+		return cost;
+	}
+
+	/** 购买费用，以分计算 */
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	
+	/** 班级共享级别，默认私有 */
+	private int sharingLevel = SharingLevel.PRIVATE;
+
+	/** 班级共享级别，默认私有 */
+	public int getSharingLevel() {
+		return sharingLevel;
+	}
+
+	/** 班级共享级别，默认私有 */
+	public void setSharingLevel(int sharingLevel) {
+		this.sharingLevel = sharingLevel;
+	}
+
+	/** 开始时间 */
+	private Date beginTime = new Date();
+
+	/** 获取开始时间 */
+	public Date getBeginTime() {
+		return beginTime;
+	}
+
+	/** 设置开始时间 */
+	public void setBeginTime(Date beginTime) {
+		this.beginTime = beginTime;
+	}
+
 	/** 学制类型 */
 	private int eduSystemType = EduSystem.ID_CHINA_MAINLAND_GAOZHONG;
 	
@@ -101,19 +206,6 @@ public class Clazz implements Serializable {
 	/** 获取学制 */
 	public EduSystem getEduSystem() {
 		return EduSystem.getEdySystem(this.eduSystemType);
-	}
-
-	/** 开始时间 */
-	private Date beginTime = new Date();
-
-	/** 获取开始时间 */
-	public Date getBeginTime() {
-		return beginTime;
-	}
-
-	/** 设置开始时间 */
-	public void setBeginTime(Date beginTime) {
-		this.beginTime = beginTime;
 	}
 	
 	/** 开始年级类型，默认高一 */

@@ -1,4 +1,4 @@
-package com.metaedu.server.business.institution;
+package com.metaedu.server.business.education;
 
 /** 班级类型
  * @author Sam

@@ -1,4 +1,4 @@
-package com.metaedu.server.business.user;
+package com.metaedu.server.business.metaweb;
 
 import java.io.Serializable;
 
@@ -80,6 +80,32 @@ public class UserSummary implements Serializable {
 		this.characterId = characterId;
 	}
 	
+	/** 角色登录账号 */
+	private String characterNumber = "";
+	
+	/** 角色登录账号 */
+	public String getCharacterNumber() {
+		return characterNumber;
+	}
+
+	/** 角色登录账号 */
+	public void setCharacterNumber(String characterNumber) {
+		this.characterNumber = characterNumber;
+	}
+	
+	/** 角色登录密码 */
+	private String characterPassword = "";
+
+	/** 角色登录密码 */
+	public String getCharacterPassword() {
+		return characterPassword;
+	}
+
+	/** 角色登录密码 */
+	public void setCharacterPassword(String characterPassword) {
+		this.characterPassword = characterPassword;
+	}
+
 	/** 用户姓名（姓和名合并显示）*/
 	private String fullName = "";
 

@@ -13,5 +13,8 @@ public class GroupType {
 	/** 机构内课程群 */
 	public static final int COURSE = 1;
 	
+	/** 基本商务沟通群 */
+	public static final int BUSINESS = 10;
+	
 	
 }

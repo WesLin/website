@@ -1,4 +1,4 @@
-package com.metaedu.server.business.institution;
+package com.metaedu.server.business.education;
 
 import java.io.Serializable;
 import java.util.Date;

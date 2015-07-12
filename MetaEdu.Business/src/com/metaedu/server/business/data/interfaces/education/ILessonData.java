@@ -1,6 +1,6 @@
-package com.metaedu.server.business.data.interfaces.institution;
+package com.metaedu.server.business.data.interfaces.education;
 
-import com.metaedu.server.business.institution.Lesson;
+import com.metaedu.server.business.education.Lesson;
 
 /** 课次基础数据接口
  * @author Sam

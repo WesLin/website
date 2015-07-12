@@ -3,6 +3,7 @@ package com.metaedu.server.business.user;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.metaedu.server.business.common.BasicValue;
 import com.metaedu.server.utils.text.TimeUtils;
 
 /** 用户类
@@ -81,7 +82,8 @@ public class User implements Serializable {
 	}
 	
 	/** 生日 */
-	private Date birthday = TimeUtils.getDateFromString("1900-01-01 00:00:00");
+	//private Date birthday = TimeUtils.getDateFromString("1900-01-01 00:00:00");
+	private Date birthday = BasicValue.UNDEFINED_DATE;
 	
 	/** 获取生日 */
 	public Date getBirthday() {

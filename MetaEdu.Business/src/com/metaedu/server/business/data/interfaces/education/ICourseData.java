@@ -1,8 +1,8 @@
-package com.metaedu.server.business.data.interfaces.institution;
+package com.metaedu.server.business.data.interfaces.education;
 
 import java.util.List;
 
-import com.metaedu.server.business.institution.Course;
+import com.metaedu.server.business.education.Course;
 import com.metaedu.server.business.user.User;
 
 /** 课程基础数据接口
