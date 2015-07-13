@@ -16,6 +16,11 @@ public class Grade implements MultiNameOwner<GradeName>, Serializable {
 	
 	private static final long serialVersionUID = -8761268139515566097L;
 	
+	/** 不限定年级 */
+	public static final int ID_UNLIMITED_GRADE = 0;
+	/** 年级类型：不限定 */
+	public static Grade GRADE_UNLIMITED_GRADE = null;
+	
 	/** 年级值：大陆托儿班 */
 	public static final int ID_CHINA_MAINLAND_YOU_1 = 101001;
 	/** 年级类型：托儿班 */
@@ -189,6 +194,12 @@ public class Grade implements MultiNameOwner<GradeName>, Serializable {
 	
 	/** 静态生成年级类型 */
 	static {
+		Grade.GRADE_UNLIMITED_GRADE = new Grade(Grade.ID_UNLIMITED_GRADE);
+		gradeMap.put(Grade.ID_UNLIMITED_GRADE, Grade.GRADE_UNLIMITED_GRADE);
+		Grade.GRADE_UNLIMITED_GRADE.addName(new GradeName("不限年级", LanguageType.SIMPLIFIED_CHINESE));
+		Grade.GRADE_UNLIMITED_GRADE.addName(new GradeName("不限年級", LanguageType.TRADTIONAL_CHINESE));
+		Grade.GRADE_UNLIMITED_GRADE.addName(new GradeName("Grade Unlimited", LanguageType.ENGLISH));
+		
 		Grade.GRADE_CHINA_MAINLAND_YOU_1 = new Grade(Grade.ID_CHINA_MAINLAND_YOU_1);
 		gradeMap.put(Grade.ID_CHINA_MAINLAND_YOU_1, Grade.GRADE_CHINA_MAINLAND_YOU_1);
 		Grade.GRADE_CHINA_MAINLAND_YOU_1.addName(new GradeName("托儿所", LanguageType.SIMPLIFIED_CHINESE));
