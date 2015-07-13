@@ -191,7 +191,7 @@ public class Clazz implements Serializable {
 	}
 
 	/** 学制类型 */
-	private int eduSystemType = EduSystem.ID_CHINA_MAINLAND_GAOZHONG;
+	private int eduSystemType = EduSystem.ID_UNLIMITED_SYSTEM;
 	
 	/** 获取学制类型 */
 	public int getEduSystemType() {
@@ -208,8 +208,8 @@ public class Clazz implements Serializable {
 		return EduSystem.getEdySystem(this.eduSystemType);
 	}
 	
-	/** 开始年级类型，默认高一 */
-	private int beginGradeType = Grade.ID_CHINA_MAINLAND_GAO_1;
+	/** 开始年级类型，默认未指定 */
+	private int beginGradeType = Grade.ID_UNLIMITED_GRADE;
 
 	/** 获取开始年级 */
 	public int getBeginGradeType() {

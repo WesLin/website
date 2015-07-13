@@ -15,6 +15,11 @@ public class Subject implements MultiNameOwner<SubjectName>, Serializable {
 
 	private static final long serialVersionUID = 3177228532733813591L;
 	
+	/** 科目代码：未指定科目 */
+	public static final int ID_UNPOINTED_SUBJECT = 0;
+	/** 科目代码：未指定科目 */
+	public static Subject SUBJECT_UNPOINTED_SUBJECT = null;
+	
 	/** 科目代码：高中其他学科 */
 	public static final int ID_CHINA_GAOZHONG_OTHER = 100001000;
 	/** 科目实体：高中其他学科 */
@@ -149,6 +154,12 @@ public class Subject implements MultiNameOwner<SubjectName>, Serializable {
 	
 	
 	static {
+		Subject.SUBJECT_UNPOINTED_SUBJECT = new Subject(Subject.ID_UNPOINTED_SUBJECT);
+		subjectList.add(Subject.SUBJECT_UNPOINTED_SUBJECT);
+		Subject.SUBJECT_UNPOINTED_SUBJECT.addName(new SubjectName("未指定科目", LanguageType.SIMPLIFIED_CHINESE));
+		Subject.SUBJECT_UNPOINTED_SUBJECT.addName(new SubjectName("未指定科目", LanguageType.TRADTIONAL_CHINESE));
+		Subject.SUBJECT_UNPOINTED_SUBJECT.addName(new SubjectName("Subject Unpointed", LanguageType.ENGLISH));
+		
 		Subject.SUBJECT_CHINA_GAOZHONG_YUWEN = new Subject(Subject.ID_CHINA_GAOZHONG_YUWEN);
 		subjectList.add(Subject.SUBJECT_CHINA_GAOZHONG_YUWEN);
 		Subject.SUBJECT_CHINA_GAOZHONG_YUWEN.addName(new SubjectName("高中语文", LanguageType.SIMPLIFIED_CHINESE));

@@ -16,6 +16,11 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 	
 	private static final long serialVersionUID = 4757818508610209050L;
 	
+	/** 不限定学制 */
+	public static final int ID_UNLIMITED_SYSTEM = 0;
+	/** 学制值：不限定 */
+	public static EduSystem SYSTEM_UNLIMITED_SYSTEM = null;
+	
 	/** 学制值：大陆幼儿园 */
 	public static final int ID_CHINA_MAINLAND_YOUERYUAN = 101001; 
 	/** 学制类型：大陆幼儿园 */
@@ -91,6 +96,17 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 	 */
 	public Grade getGradeOver() {
 		return this._gradeOver;
+	}
+	
+	/** 获取年级差异计算后的年级值
+	 * @param refGradeDiff 年级增长差值
+	 * @return
+	 */
+	public Grade getDiffGrade(int refGradeDiff) {
+		if (this._grades.size() >= refGradeDiff + 1) {
+			return this._grades.get(refGradeDiff);
+		}
+		return null;
 	}
 	
 	/** 获取下一个年级（如果没有下一个年级则返回 NULL）
@@ -198,6 +214,13 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 	
 	/** 静态执行 */
 	static {
+		EduSystem.SYSTEM_UNLIMITED_SYSTEM = new EduSystem(EduSystem.ID_UNLIMITED_SYSTEM);
+		eduSystemList.add(EduSystem.SYSTEM_UNLIMITED_SYSTEM);
+		EduSystem.SYSTEM_UNLIMITED_SYSTEM.addName(new EduSystemName("不限定学制", LanguageType.SIMPLIFIED_CHINESE));
+		EduSystem.SYSTEM_UNLIMITED_SYSTEM.addName(new EduSystemName("不限定學制", LanguageType.TRADTIONAL_CHINESE));
+		EduSystem.SYSTEM_UNLIMITED_SYSTEM.addName(new EduSystemName("Education-System Unlimited", LanguageType.ENGLISH));
+		EduSystem.SYSTEM_UNLIMITED_SYSTEM.addGrade(Grade.GRADE_UNLIMITED_GRADE);
+		
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN = new EduSystem(EduSystem.ID_CHINA_MAINLAND_YOUERYUAN);
 		eduSystemList.add(EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN);
 		EduSystem.SYSTEM_CHINA_MAINLAND_YOUERYUAN.addName(new EduSystemName("幼儿园（大陆）", LanguageType.SIMPLIFIED_CHINESE));

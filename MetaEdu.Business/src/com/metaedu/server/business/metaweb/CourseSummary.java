@@ -1,5 +1,6 @@
 package com.metaedu.server.business.metaweb;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,8 +12,10 @@ import com.metaedu.server.business.education.Subject;
  * @version 1.0
  * @since 2015.05.18
  */
-public class CourseSummary {
+public class CourseSummary implements Serializable {
 
+	private static final long serialVersionUID = 37999229342896574L;
+	
 	/** 课程编号 */
 	private String id="";
 
@@ -66,7 +69,7 @@ public class CourseSummary {
 	}
 
 	/** 科目类型 */
-	private int subjectType = Subject.ID_CHINA_GAOZHONG_YUWEN;
+	private int subjectType = Subject.ID_UNPOINTED_SUBJECT;
 
 	/** 获取科目类型 */
 	public int getSubjectType() {
@@ -89,6 +92,19 @@ public class CourseSummary {
 	/** 授课教师摘要列表 */
 	public void setTeacherSummaries(List<UserSummary> teacherSummaries) {
 		this.teacherSummaries = teacherSummaries;
+	}
+	
+	/** 关联班级最小摘要列表 */
+	public List<ClazzMinimalSummary> clazzSummaries = new ArrayList<ClazzMinimalSummary>();
+	
+	/** 关联班级最小摘要列表 */
+	public List<ClazzMinimalSummary> getClazzSummaries() {
+		return clazzSummaries;
+	}
+
+	/** 关联班级最小摘要列表 */
+	public void setClazzSummaries(List<ClazzMinimalSummary> clazzSummaries) {
+		this.clazzSummaries = clazzSummaries;
 	}
 
 	/** 起始时间 */

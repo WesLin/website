@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.metaedu.server.business.metaweb.CourseSummary;
 import com.metaedu.server.business.metaweb.InstitutionSummary;
+import com.metaedu.server.business.metaweb.LessonSummary;
 import com.metaedu.server.business.metaweb.LessonSummaryListModel;
 import com.metaedu.server.business.metaweb.UserSummary;
 
@@ -34,8 +35,13 @@ public interface IMetaWebData {
 	 */
 	public List<UserSummary> getTeacherSummaries(String refInstitutionId, String refCourseId);
 	
+	/** 获取指定主键的课程摘要
+	 * @param refCourseId 指定课程主键
+	 * @return
+	 */
+	public CourseSummary getCourseSummary(String refCourseId);
 	
-	/** 获取指定机构的课程摘要
+	/** 获取指定条件的课程摘要列表
 	 * @param refInstitutionId 指定的机构
 	 * @param refSubjectType 指定的科目类型，0为不限制
 	 * @param isBeforeClose 是否仅显示关闭时间前的课程
@@ -43,7 +49,19 @@ public interface IMetaWebData {
 	 */
 	public List<CourseSummary> getCourseSummaries(String refInstitutionId, int refSubjectType, boolean isBeforeClose);
 	
-	/** 获取指定机构的课程摘要列表模型（按日期排序）
+	/** 获取指定主键的课时摘要
+	 * @param refLessonId
+	 * @return
+	 */
+	public LessonSummary getLessonSummary(String refLessonId);
+	
+	/** 获取指定条件的课时摘要列表
+	 * @param refCourseId
+	 * @return
+	 */
+	public List<LessonSummary> getLessonSummaries(String refCourseId);
+	
+	/** 获取指定机构的课时摘要列表模型（按日期排序）
 	 * @param refInstitutionId 指定机构的编号
 	 * @param refUserId 用户主键
 	 * @param refCharacterType 角色类型

@@ -56,7 +56,7 @@ public class Course implements Serializable {
 	}
 	
 	/** 科目类型 */
-	private int subjectType = Subject.ID_CHINA_GAOZHONG_YUWEN;
+	private int subjectType = Subject.ID_UNPOINTED_SUBJECT;
 
 	/** 获取科目类型 */
 	public int getSubjectType() {
