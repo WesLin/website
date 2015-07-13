@@ -110,7 +110,7 @@ public class Lesson implements Serializable {
 	private boolean recordNeed = false;
 	
 	/** 是否需要录像 */
-	public boolean isRecordNeed() {
+	public boolean getRecordNeed() {
 		return recordNeed;
 	}
 
@@ -123,7 +123,7 @@ public class Lesson implements Serializable {
 	private boolean recordReady = false;
 
 	/** 录像是否就绪 */
-	public boolean isRecordReady() {
+	public boolean getRecordReady() {
 		return recordReady;
 	}
 
