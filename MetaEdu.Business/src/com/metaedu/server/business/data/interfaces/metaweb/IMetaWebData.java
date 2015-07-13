@@ -2,6 +2,7 @@ package com.metaedu.server.business.data.interfaces.metaweb;
 
 import java.util.List;
 
+import com.metaedu.server.business.metaweb.CourseSummary;
 import com.metaedu.server.business.metaweb.InstitutionSummary;
 import com.metaedu.server.business.metaweb.LessonSummaryListModel;
 import com.metaedu.server.business.metaweb.UserSummary;
@@ -26,6 +27,22 @@ public interface IMetaWebData {
 	 */
 	public UserSummary getUserSummary(String refInstitutionId, String refCharacterNumber);
 	
+	/** 获取指定条件的相关教师摘要
+	 * @param refInstitutionId 指定的机构
+	 * @param refCourseId 指定的课程
+	 * @return
+	 */
+	public List<UserSummary> getTeacherSummaries(String refInstitutionId, String refCourseId);
+	
+	
+	/** 获取指定机构的课程摘要
+	 * @param refInstitutionId 指定的机构
+	 * @param refSubjectType 指定的科目类型，0为不限制
+	 * @param isBeforeClose 是否仅显示关闭时间前的课程
+	 * @return
+	 */
+	public List<CourseSummary> getCourseSummaries(String refInstitutionId, int refSubjectType, boolean isBeforeClose);
+	
 	/** 获取指定机构的课程摘要列表模型（按日期排序）
 	 * @param refInstitutionId 指定机构的编号
 	 * @param refUserId 用户主键
@@ -37,6 +54,8 @@ public interface IMetaWebData {
 	 * @return
 	 */
 	public LessonSummaryListModel getLessonSummaryListModel(String refInstitutionId, String refUserId, int refCharacterType, int refSubjectType, String refCourseId, int refDetailsPerPage, int refCurrentPage);
+	
+	
 	
 	
 }
