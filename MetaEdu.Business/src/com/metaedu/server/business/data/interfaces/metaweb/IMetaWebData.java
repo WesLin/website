@@ -44,7 +44,7 @@ public interface IMetaWebData {
 	 * @param isClazzFilled 是否附加班级信息
 	 * @return
 	 */
-	public List<CourseSummary> getCourseSummaries(String refInstitutionId, int refSubjectType, boolean isBeforeClose, boolean isTeacherFilled, boolean isClazzFilled);
+	public List<CourseSummary> getCourseSummaries(String refInstitutionId, String refCourseId, int refSubjectType, boolean isBeforeClose, boolean isTeacherFilled, boolean isClazzFilled);
 	
 	/** 获取指定条件的课时摘要列表
 	 * @param refCourseId
