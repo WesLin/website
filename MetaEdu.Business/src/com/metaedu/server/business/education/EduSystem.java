@@ -17,7 +17,7 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 	private static final long serialVersionUID = 4757818508610209050L;
 	
 	/** 不限定学制 */
-	public static final int ID_UNLIMITED_SYSTEM = 0;
+	public static final int ID_UNLIMITED_SYSTEM = 1;
 	/** 学制值：不限定 */
 	public static EduSystem SYSTEM_UNLIMITED_SYSTEM = null;
 	
