@@ -8,7 +8,7 @@ package com.metaedu.server.business.education;
 public class ClazzType {
 	
 	/** 完全公开班级 */
-	public static final int FULL_OPEN = 0;
+	public static final int FULL_OPEN = 1;
 	
 	/** 行政班 */
 	public static final int ADMIN = 10;
