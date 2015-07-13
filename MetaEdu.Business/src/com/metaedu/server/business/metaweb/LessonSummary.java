@@ -148,5 +148,33 @@ public class LessonSummary implements Serializable {
 		return TimeUtils.getShortTimeText(this.overTime);
 	}
 	
+	/** 是否需要录像 */
+	private boolean recordNeed = false;
+
+	/** 是否需要录像 */
+	public boolean getRecordNeed() {
+		return recordNeed;
+	}
+
+	/** 是否需要录像 */
+	public void setRecordNeed(boolean recordNeed) {
+		this.recordNeed = recordNeed;
+	}
+	
+	/** 录像是否就绪 */
+	private boolean recordReady = false;
+
+	/** 录像是否就绪 */
+	public boolean getRecordReady() {
+		return recordReady;
+	}
+
+	/** 录像是否就绪 */
+	public void setRecordReady(boolean recordReady) {
+		this.recordReady = recordReady;
+	}
+	
+	
+	
 	
 }
