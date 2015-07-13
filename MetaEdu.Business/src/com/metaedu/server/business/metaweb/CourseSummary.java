@@ -1,8 +1,9 @@
 package com.metaedu.server.business.metaweb;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-import com.metaedu.server.business.common.LanguageType;
 import com.metaedu.server.business.education.Subject;
 
 /** 课程摘要
@@ -23,6 +24,19 @@ public class CourseSummary {
 	/** 课程编号 */
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	/** 课程名称 */
+	private String name = "";
+
+	/** 获取课程名称 */
+	public String getName() {
+		return name;
+	}
+
+	/** 设置课程名称 */
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	/** 机构主键 */
@@ -63,25 +77,20 @@ public class CourseSummary {
 	public void setSubjectType(int subjectType) {
 		this.subjectType = subjectType;
 	}
-	
-	/** 获取科目的名称 */
-	public String getSubjectName() {
-		return (Subject.getSubject(this.getSubjectType())).getName(LanguageType.SIMPLIFIED_CHINESE).getName();
-	}
-	
-	/** 课程名称 */
-	private String name = "";
 
-	/** 获取课程名称 */
-	public String getName() {
-		return name;
+	/** 授课教师摘要列表 */
+	public List<UserSummary> teacherSummaries = new ArrayList<UserSummary>();
+	
+	/** 授课教师摘要列表 */
+	public List<UserSummary> getTeacherSummaries() {
+		return teacherSummaries;
 	}
 
-	/** 设置课程名称 */
-	public void setName(String name) {
-		this.name = name;
+	/** 授课教师摘要列表 */
+	public void setTeacherSummaries(List<UserSummary> teacherSummaries) {
+		this.teacherSummaries = teacherSummaries;
 	}
-	
+
 	/** 起始时间 */
 	private Date beginTime = new Date();
 
