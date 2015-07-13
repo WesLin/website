@@ -106,6 +106,32 @@ public class Lesson implements Serializable {
 		this.overTime = overTime;
 	}
 	
+	/** 是否需要录像（默认否）*/
+	private boolean recordNeed = false;
+	
+	/** 是否需要录像 */
+	public boolean isRecordNeed() {
+		return recordNeed;
+	}
+
+	/** 是否需要录像 */
+	public void setRecordNeed(boolean recordNeed) {
+		this.recordNeed = recordNeed;
+	}
+	
+	/** 录像是否就绪 */
+	private boolean recordReady = false;
+
+	/** 录像是否就绪 */
+	public boolean isRecordReady() {
+		return recordReady;
+	}
+
+	/** 录像是否就绪 */
+	public void setRecordReady(boolean recordReady) {
+		this.recordReady = recordReady;
+	}
+
 	/** 是否有效 */
 	private boolean isValid = true;
 
