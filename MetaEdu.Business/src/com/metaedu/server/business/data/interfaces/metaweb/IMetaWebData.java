@@ -35,31 +35,22 @@ public interface IMetaWebData {
 	 */
 	public List<UserSummary> getTeacherSummaries(String refInstitutionId, String refCourseId);
 	
-	/** 获取指定主键的课程摘要
-	 * @param refCourseId 指定课程主键
-	 * @return
-	 */
-	public CourseSummary getCourseSummary(String refCourseId);
-	
 	/** 获取指定条件的课程摘要列表
 	 * @param refInstitutionId 指定的机构
+	 * @param refCourseId 指定的课程编号，null 或者空字符串为不限制
 	 * @param refSubjectType 指定的科目类型，0为不限制
 	 * @param isBeforeClose 是否仅显示关闭时间前的课程
+	 * @param isTeacherFilled 是否附加教师信息
+	 * @param isClazzFilled 是否附加班级信息
 	 * @return
 	 */
-	public List<CourseSummary> getCourseSummaries(String refInstitutionId, int refSubjectType, boolean isBeforeClose);
-	
-	/** 获取指定主键的课时摘要
-	 * @param refLessonId
-	 * @return
-	 */
-	public LessonSummary getLessonSummary(String refLessonId);
+	public List<CourseSummary> getCourseSummaries(String refInstitutionId, int refSubjectType, boolean isBeforeClose, boolean isTeacherFilled, boolean isClazzFilled);
 	
 	/** 获取指定条件的课时摘要列表
 	 * @param refCourseId
 	 * @return
 	 */
-	public List<LessonSummary> getLessonSummaries(String refCourseId);
+//	public List<LessonSummary> getLessonSummaries(String refCourseId);
 	
 	/** 获取指定机构的课时摘要列表模型（按日期排序）
 	 * @param refInstitutionId 指定机构的编号
