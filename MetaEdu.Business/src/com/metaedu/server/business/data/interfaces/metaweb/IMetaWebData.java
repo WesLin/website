@@ -29,7 +29,7 @@ public interface IMetaWebData {
 	
 	/** 获取指定条件的相关教师摘要
 	 * @param refInstitutionId 指定的机构
-	 * @param refCourseId 指定的课程
+	 * @param refCourseId 指定的课程，指定为 Null 则不限制
 	 * @return
 	 */
 	public List<UserSummary> getTeacherSummaries(String refInstitutionId, String refCourseId);
