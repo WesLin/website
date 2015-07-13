@@ -17,7 +17,7 @@ public class Grade implements MultiNameOwner<GradeName>, Serializable {
 	private static final long serialVersionUID = -8761268139515566097L;
 	
 	/** 不限定年级 */
-	public static final int ID_UNLIMITED_GRADE = 0;
+	public static final int ID_UNLIMITED_GRADE = 1;
 	/** 年级类型：不限定 */
 	public static Grade GRADE_UNLIMITED_GRADE = null;
 	

@@ -16,7 +16,7 @@ public class Subject implements MultiNameOwner<SubjectName>, Serializable {
 	private static final long serialVersionUID = 3177228532733813591L;
 	
 	/** 科目代码：未指定科目 */
-	public static final int ID_UNPOINTED_SUBJECT = 0;
+	public static final int ID_UNPOINTED_SUBJECT = 1;
 	/** 科目代码：未指定科目 */
 	public static Subject SUBJECT_UNPOINTED_SUBJECT = null;
 	
