@@ -11,11 +11,11 @@ import com.metaedu.server.business.user.User;
  */
 public interface IGroupExternalData {
 	
-	/** 获取指定班级的群组编号
+	/** 获取指定班级的群组编号（已取消，因为班级群编号即班级编号）
 	 * @param refClazzId
 	 * @return
 	 */
-	public String getGroupIdByClazzId(String refClazzId);
+//	public String getGroupIdByClazzId(String refClazzId);
 	
 	/** 获取指定机构内课程的群
 	 * @param refInstitutionId
