@@ -98,6 +98,17 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 		return this._gradeOver;
 	}
 	
+	/** 计算指定年级和学制起始年级间的差
+	 * @param refGrade 指定的年级
+	 * @return 如果年级不在当前学制内，返回 -1
+	 */
+	public int getGradeDiff(int refGradeValue) {
+		for (int i=0; i<this._grades.size(); i++) {
+			if (this._grades.get(i).getId() == refGradeValue) return i;
+		}
+		return -1;
+	}
+	
 	/** 获取年级差异计算后的年级值
 	 * @param refGradeDiff 年级增长差值
 	 * @return
