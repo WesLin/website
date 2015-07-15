@@ -34,10 +34,10 @@ public interface IGroupExternalData {
 	 * @param refName
 	 * @param refInstitutionId
 	 * @param refGroupType
-	 * @param refClazzOrCourseId
+	 * @param refTypeMark
 	 * @return 创建的业务群的编号
 	 */
-	public String createGroup(String refName, String refInstitutionId, int refGroupType, String refClazzOrCourseId);
+	public String createGroup(String refName, String refInstitutionId, int refGroupType, String refTypeMark);
 	
 	/** 删除一个业务群
 	 * @param refGroupId
