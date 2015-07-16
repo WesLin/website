@@ -126,16 +126,16 @@ public class Clazz implements Serializable {
 	}
 	
 	/** 报班人数限制，默认无（或跟随机构默认人数上限）*/
-	private int limit = 0;
+	private int memberLimit = 0;
 	
 	/** 报班人数限制，默认无（或跟随机构默认人数上限）*/
-	public int getLimit() {
-		return limit;
+	public int getMemberLimit() {
+		return memberLimit;
 	}
 
 	/** 报班人数限制，默认无（或跟随机构默认人数上限）*/
-	public void setLimit(int limit) {
-		this.limit = limit;
+	public void setMemberLimit(int refMemberLimit) {
+		this.memberLimit = refMemberLimit;
 	}
 	
 	/** 结算货币类型，默认人民币 */
@@ -152,16 +152,16 @@ public class Clazz implements Serializable {
 	}
 	
 	/** 购买费用，以分计算 */
-	private int cost = 0;
+	private int joinCost = 0;
 	
 	/** 购买费用，以分计算 */
-	public int getCost() {
-		return cost;
+	public int getJoinCost() {
+		return joinCost;
 	}
 
 	/** 购买费用，以分计算 */
-	public void setCost(int cost) {
-		this.cost = cost;
+	public void setJoinCost(int refJoinCost) {
+		this.joinCost = refJoinCost;
 	}
 	
 	/** 班级共享级别，默认私有 */
