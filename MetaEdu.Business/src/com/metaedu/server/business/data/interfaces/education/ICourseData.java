@@ -62,7 +62,8 @@ public interface ICourseData {
 	 * @param refUser
 	 * @return
 	 */
-	public boolean addCourseTeacher(String refCourseId, String refInstitutionId, User refUser);
+	//public boolean addCourseTeacher(String refCourseId, String refInstitutionId, User refUser);
+	public boolean addCourseTeacher(String refCourseId, String refInstitutionId, String refUserId);
 	
 	/** 移除一个课程教师
 	 * @param refCourseId

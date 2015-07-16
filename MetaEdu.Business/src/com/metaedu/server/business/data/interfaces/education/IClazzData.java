@@ -43,21 +43,39 @@ public interface IClazzData {
 	public boolean removeClazz(String refClazzId);
 	
 	/** 添加一个用户到班级中
-	 * @param refClazzId
-	 * @param refInstitutionId
-	 * @param refUser
-	 * @param refCharacterType
+	 * @param refClazzId 指定的班级主键
+	 * @param refInstitutionId 所属机构主键
+	 * @param refUser 待添加用户实体
+	 * @param refCharacterType 角色类型
 	 * @return
 	 */
-	public boolean addClazzUser(String refClazzId, String refInstitutionId, User refUser, int refCharacterType);
+//	public boolean addClazzUser(String refClazzId, String refInstitutionId, User refUser, int refCharacterType);
+	public boolean addClazzUser(String refClazzId, String refInstitutionId, String refUserId, int refCharacterType);
+	
+	/** 批量添加用户到班级中
+	 * @param refClazzId 指定的班级主键
+	 * @param refInstitutionId 所属机构主键
+	 * @param refUsers 待添加用户实体集合
+	 * @param refCharacterType 角色类型
+	 * @return
+	 */
+//	public boolean addClazzUsers(String refClazzId, String refInstitutionId, List<User> refUsers, int refCharacterType);
 	
 	/** 从班级中移除一个用户
-	 * @param refClazzId
-	 * @param refInstitutionId
-	 * @param refUserId
+	 * @param refClazzId 指定的班级主键
+	 * @param refInstitutionId 所属机构主键
+	 * @param refUserId 待移除用户主键
 	 * @return
 	 */
 	public boolean removeClazzUser(String refClazzId, String refInstitutionId, String refUserId, int refCharacterType);
+	
+	/** 从班级中批量移除用户
+	 * @param refClazzId 指定的班级主键
+	 * @param refInstitutionId 所属机构主键
+	 * @param refUserIds 待移除用户主键集合
+	 * @return
+	 */
+//	public boolean removeClazzUsers(String refClazzId, String refInstitutionId, List<String> refUserIds, int refCharacterType);
 	
 	
 }

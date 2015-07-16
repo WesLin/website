@@ -1,5 +1,7 @@
 package com.metaedu.server.business.data.interfaces.social;
 
+import java.util.List;
+
 import com.metaedu.server.business.user.User;
 
 
@@ -58,16 +60,37 @@ public interface IGroupExternalData {
 	 * @param refCharacterType 添加的角色类型
 	 * @return
 	 */
-	public boolean addGroupUser(String refGroupId, User refUser, int refCharacterType);
+//	public boolean addGroupUser(String refGroupId, User refUser, int refCharacterType);
+	
+	/** 添加一个群用户
+	 * @param refGroupId 添加向的群
+	 * @param refUserId 添加的用户主键
+	 * @param refCharacterType 添加的角色类型
+	 * @return
+	 */
+	public boolean addGroupUser(String refGroupId, String refUserId, int refCharacterType);
+	
+	/** 批量添加群用户
+	 * @param refGroupId 添加向的群
+	 * @param refUsers 添加的用户集合
+	 * @param refCharacterType 添加的角色类型
+	 * @return
+	 */
+	public boolean addGroupUsers(String refGroupId, List<User> refUsers, int refCharacterType);
 	
 	/** 移除一个群用户
-	 * @param refGroupId
-	 * @param refUserId
+	 * @param refGroupId 群主键
+	 * @param refUserId 用户主键
 	 * @return
 	 */
 	public boolean removeGroupUser(String refGroupId, String refUserId);
 	
-	
+	/** 批量移除群用户
+	 * @param refGroupId 群主键
+	 * @param refUserIds 用户主键集合
+	 * @return
+	 */
+	public boolean removeGroupUsers(String refGroupId, List<String> refUserIds);
 	
 	
 }
