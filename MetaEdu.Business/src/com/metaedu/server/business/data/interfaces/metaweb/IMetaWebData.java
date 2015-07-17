@@ -3,6 +3,7 @@ package com.metaedu.server.business.data.interfaces.metaweb;
 import java.util.List;
 
 import com.metaedu.server.business.metaweb.CourseSummary;
+import com.metaedu.server.business.metaweb.CourseSummaryListModel;
 import com.metaedu.server.business.metaweb.InstitutionSummary;
 import com.metaedu.server.business.metaweb.LessonSummary;
 import com.metaedu.server.business.metaweb.LessonSummaryListModel;
@@ -63,6 +64,19 @@ public interface IMetaWebData {
 	 * @return
 	 */
 	public LessonSummaryListModel getLessonSummaryListModel(String refInstitutionId, String refUserId, int refCharacterType, int refSubjectType, String refCourseId, int refDetailsPerPage, int refCurrentPage);
+	
+	
+	/** 获取指定机构的课程摘要列表模型（按日期排序）
+	 * @param refInstitutionId 指定机构的编号
+	 * @param refUserId 用户主键
+	 * @param refCharacterType 角色类型
+	 * @param SubjectType 指定的科目种类，0为不限
+	 * @param refDetailsPerPage 每页显示的条目数量
+	 * @param refCurrentPage 指定的页数
+	 * @return
+	 */
+	public CourseSummaryListModel getCourseSummaryListModel(String refInstitutionId, String refUserId, int refCharacterType, int SubjectType, int refDetailsPerPage, int refCurrentPage);
+	
 	
 	
 	
