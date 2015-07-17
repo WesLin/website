@@ -75,7 +75,7 @@ public interface IMetaWebData {
 	 * @param refCurrentPage 指定的页数
 	 * @return
 	 */
-	public CourseSummaryListModel getCourseSummaryListModel(String refInstitutionId, String refUserId, int refCharacterType, int SubjectType, int refDetailsPerPage, int refCurrentPage);
+//	public CourseSummaryListModel getCourseSummaryListModel(String refInstitutionId, String refUserId, int refCharacterType, int SubjectType, int refDetailsPerPage, int refCurrentPage);
 	
 	
 	
