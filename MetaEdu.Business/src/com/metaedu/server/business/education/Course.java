@@ -152,8 +152,10 @@ public class Course implements Serializable {
 	public String getGroupName() {
 		Calendar ca = Calendar.getInstance();
 		ca.setTime(this.beginTime);
-		String curTime = String.valueOf(ca.get(Calendar.YEAR)) + String.valueOf(ca.get(Calendar.MONTH));
-		return curTime + " " + this.getName();
+		String curYear = String.valueOf(ca.get(Calendar.YEAR));
+		int curMonthValue = ca.get(Calendar.MONTH) + 1;
+		String curMonth = curMonthValue < 10 ? "0" + curMonthValue : "" + curMonthValue;
+		return curYear + "." + curMonth + " " + this.getName();
 	}
 	
 }

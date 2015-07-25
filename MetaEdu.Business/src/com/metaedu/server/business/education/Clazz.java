@@ -272,8 +272,14 @@ public class Clazz implements Serializable {
 		//int curYear = this.beginTime.get
 		Calendar ca = Calendar.getInstance();
 		ca.setTime(this.beginTime);
-		String curYear = String.valueOf(ca.get(Calendar.YEAR)).substring(2);
-		return curYear + "届 " + Grade.getGrade(this.getBeginGradeType()).getNameValue(LanguageType.SIMPLIFIED_CHINESE) + " " + this.getName();
+		String curYear = String.valueOf(ca.get(Calendar.YEAR));
+		int curMonthValue = ca.get(Calendar.MONTH) + 1;
+		String curMonth = curMonthValue < 10 ? "0" + curMonthValue : "" + curMonthValue;
+		if (clazzType == ClazzType.ADMIN) { // 如果是行政班
+			return curYear + " " + Grade.getGrade(this.getBeginGradeType()).getNameValue(LanguageType.SIMPLIFIED_CHINESE) + " " + this.getName();
+		} else { // 如果是其他类型（教学与公开班等）
+			return curYear + "." + curMonth + " " + Grade.getGrade(this.getBeginGradeType()).getNameValue(LanguageType.SIMPLIFIED_CHINESE) + " " + this.getName();
+		}
 	}
 	
 	
