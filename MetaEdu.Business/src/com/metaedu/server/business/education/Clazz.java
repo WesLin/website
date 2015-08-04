@@ -73,8 +73,8 @@ public class Clazz implements Serializable {
 		this.name = name;
 	}
 	
-	/** 班级类型，默认行政班 */
-	private int clazzType = ClazzType.ADMIN;
+	/** 班级类型，默认普通班级 */
+	private int clazzType = ClazzType.NORMAL;
 
 	/** 获取行政班类型 */
 	public int getClazzType() {
