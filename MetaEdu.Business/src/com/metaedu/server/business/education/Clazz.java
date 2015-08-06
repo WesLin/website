@@ -74,7 +74,7 @@ public class Clazz implements Serializable {
 	}
 	
 	/** 班级类型，默认普通班级 */
-	private int clazzType = ClazzType.NORMAL;
+	private int clazzType = ClazzType.ADMIN;
 
 	/** 获取行政班类型 */
 	public int getClazzType() {
@@ -86,6 +86,19 @@ public class Clazz implements Serializable {
 		this.clazzType = clazzType;
 	}
 	
+	/** 是否创建业务群 */
+	private boolean enableGroup = false;
+	
+	/** 是否创建业务群 */
+	public boolean getEnableGroup() {
+		return enableGroup;
+	}
+
+	/** 是否创建业务群 */
+	public void setEnableGroup(boolean refEnableGroup) {
+		this.enableGroup = refEnableGroup;
+	}
+
 	/** 是否选修班级 */
 	private boolean isSelective = false;
 	

@@ -81,6 +81,19 @@ public class Course implements Serializable {
 		this.name = name;
 	}
 	
+	/** 是否创建业务群 */
+	private boolean enableGroup = false;
+	
+	/** 是否创建业务群 */
+	public boolean getEnableGroup() {
+		return enableGroup;
+	}
+
+	/** 是否创建业务群 */
+	public void setEnableGroup(boolean refEnableGroup) {
+		this.enableGroup = refEnableGroup;
+	}
+
 	/** 起始时间 */
 	private Date beginTime = new Date();
 

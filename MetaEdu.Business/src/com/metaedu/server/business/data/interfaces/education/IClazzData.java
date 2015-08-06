@@ -30,7 +30,7 @@ public interface IClazzData {
 	 */
 	public boolean createClazz(Clazz refClazz);
 	
-	/** 更新一个班级
+	/** 更新一个班级（不变更班级的业务群属性）
 	 * @param refClazz
 	 * @return
 	 */

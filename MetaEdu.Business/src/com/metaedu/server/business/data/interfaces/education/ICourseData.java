@@ -24,7 +24,7 @@ public interface ICourseData {
 	 */
 	public boolean createCourse(Course refCourse);
 	
-	/** 更新课程
+	/** 更新课程（不变更课程的业务群属性）
 	 * @param refCourse
 	 * @return
 	 */
