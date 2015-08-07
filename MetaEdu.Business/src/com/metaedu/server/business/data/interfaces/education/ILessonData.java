@@ -1,5 +1,6 @@
 package com.metaedu.server.business.data.interfaces.education;
 
+import com.metaedu.server.business.complex.Record;
 import com.metaedu.server.business.education.Lesson;
 
 /** 课次基础数据接口
@@ -32,6 +33,12 @@ public interface ILessonData {
 	 * @return
 	 */
 	public boolean removeLesson(String refLessonId);
+	
+	/** 获取指定课次的录像
+	 * @param refLessonId 指定的课次主键
+	 * @return
+	 */
+	public Record getRecordByLessonId(String refLessonId);
 	
 	
 	
