@@ -38,8 +38,19 @@ public interface ILessonData {
 	 * @param refLessonId 指定的课次主键
 	 * @return
 	 */
-	public Record getRecordByLessonId(String refLessonId);
+	public Record getLessonRecordById(String refLessonId);
 	
+	/** 创建课次录像
+	 * @param refLessonId 指定的课次主键
+	 * @param refRecord 录像实体（主键和课次主键一致）
+	 * @return
+	 */
+	public boolean createLessonRecord(String refLessonId, Record refRecord);
 	
+	/** 删除课次录像
+	 * @param refLessonId 录像对应的课次主键
+	 * @return
+	 */
+	public boolean removeLessonRecord(String refLessonId);
 	
 }

@@ -12,7 +12,7 @@ public class Record implements Serializable {
 	private static final long serialVersionUID = -3609919487560171818L;
 	
 	/** 录像（会话）主键 */
-	private String id;
+	private String id = "";
 
 	/** 录像（会话）主键 */
 	public String getId() {
@@ -25,7 +25,7 @@ public class Record implements Serializable {
 	}
 	
 	/** 录像内容 */
-	private String content;
+	private String content = "";
 
 	/** 录像内容 */
 	public String getContent() {
