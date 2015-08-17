@@ -11,7 +11,7 @@ public class MultiTypeName {
 	protected String _id = "";
 	
 	/** 设置命名主键
-	 * @param refId
+	 * @param refId 命名主键
 	 */
 	public void setId(String refId) {
 		this._id = refId;
@@ -28,7 +28,7 @@ public class MultiTypeName {
 	protected String _name = "";
 	
 	/** 获取命名
-	 * @return
+	 * @return 命名字符串
 	 */
 	public String getName() {
 		return this._name;
@@ -38,7 +38,7 @@ public class MultiTypeName {
 	protected int _languageType = LanguageType.SIMPLIFIED_CHINESE;
 	
 	/** 获取命名所用语种
-	 * @return
+	 * @return 所用语种类型
 	 */
 	public int getLanguageType() {
 		return this._languageType;
@@ -48,7 +48,7 @@ public class MultiTypeName {
 	protected int _nameType = NameType.FORMAL;
 	
 	/** 获取命名类型
-	 * @return
+	 * @return 命名类型值
 	 */
 	public int getNameType() {
 		return this._nameType;

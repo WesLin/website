@@ -45,7 +45,7 @@ public interface IClazzData {
 	/** 添加一个用户到班级中
 	 * @param refClazzId 指定的班级主键
 	 * @param refInstitutionId 所属机构主键
-	 * @param refUser 待添加用户实体
+	 * @param refUserId 待添加用户主键
 	 * @param refCharacterType 角色类型
 	 * @return
 	 */

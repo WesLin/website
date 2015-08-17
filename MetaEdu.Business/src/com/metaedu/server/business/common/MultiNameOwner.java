@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public interface MultiNameOwner<T extends MultiName> {
 	
 	/** 获取名称集合
-	 * @return
+	 * @return 名称集合列表
 	 */
 	public ArrayList<T> getNames();
 	
@@ -18,13 +18,13 @@ public interface MultiNameOwner<T extends MultiName> {
 	public T getName(int refLanguageType);
 	
 	/** 添加名称对象
-	 * @param refName
+	 * @param refName 命名对象
 	 */
 	public void addName(T refName);
 	
 	/** 获取指定语言类型的名称值
 	 * @param refLanguageType 指定的语言类型
-	 * @return
+	 * @return 指定语言类型的名称字符串
 	 */
 	public String getNameValue(int refLanguageType);
 	

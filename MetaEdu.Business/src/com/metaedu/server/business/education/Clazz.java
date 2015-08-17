@@ -21,8 +21,8 @@ public class Clazz implements Serializable {
 	
 	
 	/** 构造函数
-	 * @param refIsInit 是初始化还是赋值
-	 * @param refInstitutionId 机构编号
+	 * @param refIsInit 是初始化还是 DAO 场景赋值
+	 * @param refInstitutionOrClazzId 初始化时为机构主键，DAO时为班级实体主键
 	 */
 	public Clazz(boolean refIsInit, String refInstitutionOrClazzId) {
 		if (refIsInit) { // 如果是新建

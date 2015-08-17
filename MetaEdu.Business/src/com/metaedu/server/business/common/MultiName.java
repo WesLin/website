@@ -11,7 +11,7 @@ public class MultiName {
 	protected String _id = "";
 	
 	/** 设置命名主键
-	 * @param refId
+	 * @param refId 命名主键
 	 */
 	public void setId(String refId) {
 		this._id = refId;
@@ -28,7 +28,7 @@ public class MultiName {
 	protected String _name = "";
 	
 	/** 获取命名
-	 * @return
+	 * @return 命名
 	 */
 	public String getName() {
 		return this._name;
@@ -38,7 +38,7 @@ public class MultiName {
 	protected int _languageType = LanguageType.SIMPLIFIED_CHINESE;
 	
 	/** 获取命名所用语种
-	 * @return
+	 * @return 语种类型
 	 */
 	public int getLanguageType() {
 		return this._languageType;

@@ -10,8 +10,8 @@ import com.metaedu.server.business.institution.Institution;
 public interface IInstitutionData {
 
 	/** 获取指定编号的机构实例
-	 * @param refId 机构实例的编号
-	 * @return
+	 * @param refInstitutionId 机构实例的编号
+	 * @return 指定的机构实体或 Null
 	 */
 	public Institution getInstitutionById(String refInstitutionId);
 	

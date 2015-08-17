@@ -10,24 +10,24 @@ import java.util.ArrayList;
 public interface MultiTypeNameOwner<T extends MultiTypeName> {
 	
 	/** 获取名称集合
-	 * @return
+	 * @return 名称集合
 	 */
 	public ArrayList<T> getNames();
 	
 	/** 获取指定语言类型的名称对象集合
 	 * @param refLanguageType
-	 * @return
+	 * @return 指定语言类型的名称对象集合
 	 */
 	public ArrayList<T> getLanguageNames(int refLanguageType);
 	
 	/** 获取指定名称类型的名称对象集合
 	 * @param refNameType
-	 * @return
+	 * @return 指定名称类型的名称对象集合
 	 */
 	public ArrayList<T> getTypeNames(int refNameType);
 	
 	/** 添加名称对象
-	 * @param refName
+	 * @param refName 待添加的名称对象
 	 */
 	public void addName(T refName);
 	

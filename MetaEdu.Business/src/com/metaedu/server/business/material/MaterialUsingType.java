@@ -3,7 +3,7 @@ package com.metaedu.server.business.material;
 
 /** 资料类型
  * @author Sam
- * @date 2015-06-25
+ * @since 2015.06.14
  * @version 1.0.0
  */
 public class MaterialUsingType {

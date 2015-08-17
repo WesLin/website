@@ -67,7 +67,7 @@ public class Currency implements MultiNameOwner<CurrencyName>, Serializable {
 	}
 
 	/** 获取指定语言类型的货币名称
-	 * @param refLanguage 语言种类
+	 * @param refLanguageType 语言种类
 	 */
 	public CurrencyName getName(int refLanguageType) {
 		for (CurrencyName curName : this.names) {

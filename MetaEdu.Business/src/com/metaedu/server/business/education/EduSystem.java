@@ -99,7 +99,7 @@ public class EduSystem implements MultiNameOwner<EduSystemName>, Serializable  {
 	}
 	
 	/** 计算指定年级和学制起始年级间的差
-	 * @param refGrade 指定的年级
+	 * @param refGradeValue 指定的年级类型值
 	 * @return 如果年级不在当前学制内，返回 -1
 	 */
 	public int getGradeDiff(int refGradeValue) {
