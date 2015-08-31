@@ -1,0 +1,346 @@
+@CHARSET "UTF-8";
+
+.block_course_info_outer_box, .block_clazz_info_outer_box {
+	float: left;
+}
+
+.block_course_info_inner_box, .block_clazz_info_inner_box {
+	margin: 0px;
+	border: 0px solid #aaa;
+	width: 958px;
+}
+/**************************课程、班级基本信息区域样式*********************************/
+.block_course_info_inner_basicInfo, .block_clazz_info_inner_basicInfo {
+	margin-top: 30px;
+	position: relative;
+}
+
+.block_course_info_inner_basicInfo_left,
+	.block_clazz_info_inner_basicInfo_left {
+	float: left;
+	width: 200px;
+	height:200px;
+	padding: 0px;
+}
+
+.block_course_info_inner_basicInfo_left_image,
+	.block_clazz_info_inner_basicInfo_left_image {
+	display: block;
+	height: 160px;
+	width: 160px;
+	background: #ccc;
+	float: left;
+	border: 4px solid #cdced0;
+	margin: 15px 15px;
+}
+
+.block_course_info_inner_basicInfo_right,
+	.block_clazz_info_inner_basicInfo_right {
+	float: left;
+	margin: 40px 50px;
+}
+.block_clazz_info_inner_basicInfo_right{
+	margin-top: 30px;
+}
+/* .block_course_info_inner_basicInfo_right .block_course_info_inner_basicInfo_right_entries:FIRST-CHILD{
+	font-weight: bold;
+} *//* 设置课程字体加粗 */
+.block_course_info_inner_basicInfo_right_entries,
+	.block_clazz_info_inner_basicInfo_right_entries {
+	min-height: 20px;
+	max-height:60px;
+	line-height: 20px;
+	text-align: left;
+	font-size: 12px;
+	color: #2c2c2c;
+	letter-spacing: 2px;
+	position: relative;
+	width: 600px;
+}
+
+.block_course_info_inner_basicInfo_right_entries_span,
+	.block_clazz_info_inner_basicInfo_right_entries_span {
+	color: #7c7c7c;
+	margin-right: 15px;
+	float: left;
+}
+.block_course_info_inner_basicInfo_right_entries_span_teachers{
+	display:block;
+	width: 500px;
+	float: left;
+}
+.block_clazz_info_inner_basicInfo_right_entries_clazzMembers {
+	width: 500px;
+	border: 1px solid #bbb;
+	position: absolute;
+	left: 85px;
+	top: 22px;
+	background-color:#ebf1ef;
+	z-index: 1;
+	display: none;
+	color: #424a45;
+}
+
+.block_clazz_info_inner_basicInfo_right_entries_clazzMember {
+	float: left;
+	height: 20px;
+	min-width: 60px;
+	max-width: 130px;
+	text-align: center;
+	line-height: 20px;
+	color: #6a6a6a;
+	padding: 5px;
+}
+/**************************课程、班级基本信息区域样式END*********************************/
+
+/**************************课程、班级课时安排区域样式*********************************/
+.block_course_info_inner_lessionTimes,
+	.block_clazz_info_inner_lessionTimes {
+	clear: both;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail,.block_clazz_info_inner_lessionTimes_entries_detail{
+	
+	border-bottom: 1px solid #9e9e9e;
+	height: 20px;
+	padding: 15px 0;
+	line-height: 50px;
+}
+
+#block_course_info_inner_lessionTimes_head,
+	#block_clazz_info_inner_lessionTimes_head {
+	margin:0;
+	padding:0;
+	border: 0;
+	line-height:20px;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: left;
+	margin-bottom: 10px;
+	margin-top: 25px;
+	margin-left: 10px;
+}
+.block_course_info_inner_lessionTimes_head_title,.block_clazz_info_inner_lessionTimes_head_title{
+	line-height:20px;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: left;
+	float: left;
+}
+.block_course_info_inner_lessionTimes_entries_box,.block_clazz_info_inner_lessionTimes_entries_box{
+	border: 2px solid #9e9e9e;
+	margin: 10px;
+}
+/****************************页码区样式********************************/
+.block_course_info_inner_lessionTimes_head_page,.block_clazz_info_inner_lessionTimes_head_page{
+	height:20px;
+	text-align: center;
+}
+.block_course_info_inner_lessionTimes_head_page_box,.block_clazz_info_inner_lessionTimes_head_page_box{
+	margin: 0 auto;
+	display: block;
+	height: 20px;
+	width: 330px;
+}
+.block_course_info_inner_lessionTimes_head_page_box span,.block_clazz_info_inner_lessionTimes_head_page_box span{
+	display:block;
+	height:20px;
+	line-height:20px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.block_course_info_inner_lessionTimes_head_page_preAndNext,.block_course_info_inner_lessionTimes_head_page_firstAndLastAndTo,.block_course_info_inner_lessionTimes_head_page_numView,
+.block_clazz_info_inner_lessionTimes_head_page_preAndNext,.block_clazz_info_inner_lessionTimes_head_page_firstAndLastAndTo,.block_clazz_info_inner_lessionTimes_head_page_numView{
+	display:block;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	text-decoration: none;
+	width: 45px;
+	margin: 3px 5px;
+	color: #ebfbf9;
+}
+.page_defoult_backColor{
+	background-color: #7c7e7e;
+}
+.page_defoult_backColor:HOVER{
+	cursor: default;
+}
+.page_active_backColor{
+	background-color: #14bfb1;
+}
+.page_active_backColor:HOVER{
+	background-color: #22d2c4;
+}
+.block_course_info_inner_lessionTimes_head_page_numView,.block_clazz_info_inner_lessionTimes_head_page_numView{
+	width:50px;
+	border-left: 1px solid #7c7e7e;
+	border-right: 1px solid #7c7e7e;
+	background-color:#fff;
+	text-decoration: none;
+	color: #666;
+}
+.block_course_info_inner_lessionTimes_head_page_numView:HOVER,.block_clazz_info_inner_lessionTimes_head_page_numView:HOVER{
+	cursor: text;
+}
+.block_course_info_inner_lessionTimes_head_page_firstAndLastAndTo,.block_clazz_info_inner_lessionTimes_head_page_firstAndLastAndTo{
+	width: 30px;
+}
+#block_course_info_inner_lessionTimes_head_page_num,#block_clazz_info_inner_lessionTimes_head_page_num{
+	width: 20px;
+	height:14px;
+	padding:0 5px;
+	margin: 3px 0px;
+}
+/****************************页码区样式END********************************/
+
+/****************************课时安排表头样式********************************/
+.block_course_info_inner_lessionTimes_entries_title,.block_clazz_info_inner_lessionTimes_entries_title{
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: #efefef;
+}
+.block_course_info_inner_lessionTimes_entries_title span,.block_clazz_info_inner_lessionTimes_entries_title span{
+	display:block;
+	float:left;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;	
+	margin: 0 20px;
+	color: #626665;
+	font-weight: bold;
+}
+.block_course_info_inner_lessionTimes_entries_title_date,.block_clazz_info_inner_lessionTimes_entries_title_date{
+	width: 100px;
+}
+.block_course_info_inner_lessionTimes_entries_title_name,.block_clazz_info_inner_lessionTimes_entries_title_name{
+	width: 230px;
+}
+.block_course_info_inner_lessionTimes_entries_title_time,.block_clazz_info_inner_lessionTimes_entries_title_time{
+	width: 200px;
+}
+.block_course_info_inner_lessionTimes_entries_title_state,.block_clazz_info_inner_lessionTimes_entries_title_state{
+	width: 100px;
+}
+.block_course_info_inner_lessionTimes_entries_title_operation,.block_clazz_info_inner_lessionTimes_entries_title_operation{
+	width: 100px;
+}
+/****************************课时安排表头样式END********************************/
+.block_course_info_inner_lessionTimes_entries_detail span,
+	.block_clazz_info_inner_lessionTimes_entries_detail span {
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin: 0 20px;
+	float: left;
+	color: #5c5c5c;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_date,
+	.block_clazz_info_inner_lessionTimes_entries_detail_date {
+	width: 100px;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_name,
+	.block_clazz_info_inner_lessionTimes_entries_detail_name {
+	width: 230px;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_time,
+	.block_clazz_info_inner_lessionTimes_entries_detail_time {
+	width: 200px;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_state,
+	.block_clazz_info_inner_lessionTimes_entries_detail_state {
+	width: 100px;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation {
+	width: 100px;
+}
+
+.block_course_info_inner_back, .block_clazz_info_inner_back {
+	text-align: center;
+	height: 30px;
+	margin-bottom: 50px;
+	line-height: 30px;
+}
+/**************************课程、班级课时安排区域样式END*********************************/
+
+/**************************页面控件样式*********************************/
+.block_course_info_inner_back_a, .block_clazz_info_inner_back_a {
+	text-decoration: none;
+	display: block;
+	height: 30px;
+	width: 120px;
+	line-height: 30px;
+	margin: 0 auto;
+	background-color: #17bfb2;
+	color: #fff;
+	border: 1px solid #17bfb2;
+	border-radius: 2px;
+}
+
+.block_course_info_inner_back_a:HOVER, .block_clazz_info_inner_back_a:HOVER
+	{
+	background-color: #26cfc2;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation a,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation a {
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	color: #fff;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 2px;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation_video,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation_video {
+	background-color: #e05251;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation_video:HOVER,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation_video:HOVER {
+	background-color: #e5606a;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation_inClazz,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation_inClazz {
+	background-color: #17bfb2;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation_inClazz:HOVER,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation_inClazz:HOVER {
+	background-color: #26cfc2;
+}
+
+.block_course_info_inner_lessionTimes_entries_detail_operation_unable,
+	.block_clazz_info_inner_lessionTimes_entries_detail_operation_unable {
+	cursor:default;
+	background-color: #839392;
+}
+#clazzMemberView{
+	display:block;
+	float:left;
+	text-align:center;
+	line-height:20px;
+	border-radius:2px;
+	text-decoration:none;
+	width: 100px;
+	height: 20px;
+	background-color: #ecf2f0;
+	color:#666;
+	border: 1px solid #727675;
+}
+/**************************页面控件样式END*********************************/

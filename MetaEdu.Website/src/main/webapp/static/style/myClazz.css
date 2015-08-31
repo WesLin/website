@@ -1,0 +1,167 @@
+@CHARSET "UTF-8";
+
+.block_basic_main_clazz_list {
+	float: left;
+}
+/******************班级类型样式***********************/
+.block_basic_main_clazz_list_clazzType {
+	height: 30px;
+	position: relative;
+}
+
+.block_basic_main_clazz_list_clazzType span {
+	display: block;
+	float: left;
+	height: 18px;
+	width: 318px;
+	text-align: center;
+	border-right: 2px solid #ccc;
+	line-height: 30px;
+	padding: 5px 0;
+	border-bottom: 2px solid #666c6a;
+}
+.block_basic_main_clazz_list_clazzType span:LAST-CHILD {
+	border-right: 0;
+}
+
+.block_basic_main_clazz_list_clazzType span a {
+	display: block;
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 18px;
+	line-height: 18px;
+	width: 120px;
+	border-radius: 2px;
+}
+.block_basic_main_clazz_list_clazzType_default{
+	border: 0;
+	color: #acacac;
+}
+.block_basic_main_clazz_list_clazzType_active {
+	border: 1px solid #17bfb2;
+	color: #666;
+}
+.block_basic_main_clazz_list_clazzType_checked {
+	border: 1px solid #17bfb2;
+	color: #666;
+}
+/******************班级类型样式END***********************/
+
+/******************班级列表表头样式**********************/
+.block_basic_main_clazz_list_tableTitle {
+	height: 30px;
+	background: #def2f1;
+}
+
+.block_basic_main_clazz_list_tableTitle span {
+	display: block;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #666c6a;
+	text-align: center;
+}
+
+.block_basic_main_clazz_list_tableTitle_img {
+	width: 160px;
+}
+
+.block_basic_main_clazz_list_tableTitle_clazzName {
+	width: 270px;
+}
+
+.block_basic_main_clazz_list_tableTitle_course {
+	width: 320px;
+}
+
+.block_basic_main_clazz_list_tableTitle_ope {
+	width: 200px;
+}
+/******************班级列表表头样式END*******************/
+
+/******************班级列表项样式*******************/
+.block_basic_main_clazz_list_unit_box {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.block_basic_main_clazz_list_unit {
+	height: 120px;
+	width: 940px;
+	border-bottom: 1px solid #9e9e9e;
+}
+
+.block_basic_main_clazz_list_unit span {
+	
+}
+
+.block_basic_main_clazz_list_detail_img {
+	width: 80px;
+	height: 80px;
+	background-color: #ccc;
+	margin: 20px 40px;
+	float: left;
+}
+
+.block_basic_main_clazz_list_detail_content {
+	height: 120px;
+	float: left;
+}
+
+.block_basic_main_clazz_list_detail_content_clazzName {
+	height: 120px;
+	width: 270px;
+	text-align: center;
+	line-height: 120px;
+	font-weight: bold;;
+	font-size: 13px;
+	color: #616161;
+	float: left;
+}
+
+.block_basic_main_clazz_list_detail_content_course {
+	display: table;
+	width: 290px;
+	color: #5e5e5e;
+	height: 100px;
+	text-align: center;
+	float: left;
+	padding: 10px;
+}
+
+.block_basic_main_clazz_list_detail_content_course_content {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px;
+	color: #5e5e5e;
+}
+
+.block_basic_main_clazz_list_detail_ope {
+	display: block;
+	height: 26px;
+	text-align: center;
+	width: 200px;
+	float: right;
+	padding: 47px 0;
+}
+
+.block_basic_main_clazz_list_detail_ope a {
+	text-decoration: none;
+	width: 100px;
+	height: 24px;
+	display: block;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #17bfb2;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.block_basic_main_clazz_list_detail_ope a:HOVER {
+	background-color: #26cfc2;
+}
+/******************班级列表项样式END*******************/

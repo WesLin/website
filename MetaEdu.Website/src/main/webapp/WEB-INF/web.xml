@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<display-name>MetaEdu.WebSite</display-name>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.gif</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.jpg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.swf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.png</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.xml</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Session 超时，默认 1 天 -->
+	<session-config>
+		<session-timeout>1440</session-timeout>
+	</session-config>
+
+	<filter>
+		<filter-name>sessionFilter</filter-name>
+		<filter-class>com.metaedu.server.website.web.filter.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>*.htm</url-pattern>
+	</filter-mapping>
+	
+	<!-- Spring Servlet 定义 -->
+	<servlet>
+		<servlet-name>metasite</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup><!-- 设定为启动项 -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>metasite</servlet-name>
+		<url-pattern>*.htm</url-pattern><!-- 设定 .htm 为执行后缀 -->
+	</servlet-mapping>
+
+	
+	<!-- 日志服务自启动 -->
+	<!-- <listener>
+		<listener-class>com.metaedu.utils.log.LogContextListener</listener-class>
+	</listener>-->
+	
+	<!-- 首页定义（进行跳转） -->
+	<welcome-file-list>
+		<welcome-file>welcome.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>

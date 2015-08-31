@@ -1,0 +1,96 @@
+/** 通用样式 */
+* { margin:0; padding:0; font:12px "Microsoft Yahei", Arial, Verdana; color:#202020; }
+body { background:#ecf2f0 url(image/page_global_bg.png) repeat-x; }
+div {  }
+input { float:left; margin:0; padding:0; }
+select { float:left; margin:0; padding:0; }
+a { cursor:pointer; text-decoration:underline; }
+
+
+#frame_global { width:1200px; margin:0 auto; }
+
+#frame_header { width:100%; height:50px; }
+	#frame_header_logo_area { margin:0 0 0 0; width:500px; float:left; }
+	#frame_header_ope_area { width:700px; padding-top:20px; float:left; text-align:right; }
+		#frame_header_ope_area span a { font-size:16px; font-weight:bold; margin-right:20px; color:#ffffff; }
+	
+#frame_content { width:100%; background:f6f6f6; margin-top:20px; }
+
+#frame_footer { float:left; width:100%; margin-top:20px; text-align:center; color:#666666; border-top:1px solid #6ecdc5; margin-top:40px; padding-top:10px;}
+	#frame_footer p { line-height:20px; font-size:14px; }
+
+#window_friendlyInform { position:absolute; width:300px; height:40px; padding:0; display:inline; z-Index:10;}
+	#window_friendlyInform .title { position:absolute; top:6px; left:10px; height:20px; color:#666666; font-weight:bold; background:#cccccc; z-Index:2;  }
+	#window_friendlyInform .content { position:absolute; top:10px; left:10px; width:280px; color:#ffffff; font-weight:bold; font-size:14px; text-align:center; z-Index:2;}
+	#window_friendlyInform .background { position:absolute; left:0px; top:0px; width:300px; height:40px; z-Index:1; background:#000000; }
+
+
+#block_user_panel { float:left; width:218px; padding-bottom:10px; background:#ffffff; border:1px solid #9f9f9f; }
+	#block_user_setting_area { float:left; width:188px; padding:10px 15px; }
+		#block_user_avatar_area { float:left; width:74px; }
+			#block_user_avatar_area img { width:60px; height:60px;  }
+		#block_user_setting_area_username { float:left; width:80px; padding:8px 0 0 0; font-weight:bold; }
+		#block_user_setting_area_ctrls { float:left; width:114px; padding:10px 0 0 0; }
+			#block_user_setting_area_ctrls input { margin-right:6px; width:45px; height:24px; background:url(image/button_small_bg.jpg) no-repeat; border:0; color:#ffffff; font-weight:bold; }
+	#block_user_institution_pick_area { float:left; width:178px; height:20px; padding:8px 20px; background:#efefef; border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf; font-size:14px; font-weight:bold; }
+	#block_user_operation_area span { float:left; position:relative; width:154px; height:20px; padding:10px 20px 6px 44px; font-weight:bold; font-size:13px; color:#606060; cursor:pointer; }
+		#block_user_operation_area_my_schedule { background:url(image/ope_myschedule_bg.jpg) no-repeat 20px 10px; }
+			#block_user_operation_area .block_user_operation_area_my_schedule_active { background:#def2f1 url(image/ope_myschedule_bg2.jpg) no-repeat 20px 10px; }
+		#block_user_operation_area_my_course { background:url(image/ope_mycourse_bg.jpg) no-repeat 20px 10px; }
+			#block_user_operation_area .block_user_operation_area_my_course_active { background:#def2f1 url(image/ope_mycourse_bg2.jpg) no-repeat 20px 10px; }
+		#block_user_operation_area_my_clazz { background:url(image/ope_myclazz_bg.jpg) no-repeat 20px 10px; }
+			#block_user_operation_area .block_user_operation_area_my_clazz_active { background:#def2f1 url(image/ope_myclazz_bg2.jpg) no-repeat 20px 10px; }
+			
+.block_basic_main { float:left; width:958px; margin-left:20px; background:#ffffff; border:1px solid #9f9f9f; }
+	.block_basic_title { float:left; width:920px; height:20px; padding:10px 0 10px 38px; font-size:16px; font-weight:bold; border-bottom:1px solid #9f9f9f; background:#efefef; }
+	#block_lesson_list_title { background:#efefef url(image/title_lessonlist_bg.jpg) no-repeat 10px 10px; }
+	#block_lesson_edit_title { background:#efefef url(image/title_lessonlist_bg.jpg) no-repeat 10px 10px; }
+	#block_course_list_title { background:#efefef url(image/title_course_bg.png) no-repeat 10px 10px; }
+	#block_clazz_list_title { background:#efefef url(image/title_clazz_bg.png) no-repeat 10px 10px; }
+	#block_set_info_title { background:#efefef url(image/title_set_bg.png) no-repeat 10px 10px; }
+	
+	.block_basic_main_ope_area { float:left; width:920px; height:20px; padding:10px 0 10px 38px; border-bottom:1px solid #9f9f9f; }
+		.block_basic_main_ope_area input { float:left; width:90px; height:24px; background:url(image/button_middle_bg.jpg) no-repeat; border:0; color:#ffffff; font-weight:bold; } 
+
+	.block_basic_main_list { float:left; }
+		#block_lesson_list_details {}
+		
+		.block_basic_main_list_detail_unit { float:left; width:920px; height:60px; padding:15px 0 15px 38px; border-bottom:1px solid #efefef; }
+			.block_basic_main_list_detail_img { float:left; width:80px; height:60px; }
+				.block_basic_main_list_detail_img img { width:60px; height:60px; }
+				
+			.block_basic_main_list_detail_content { float:left; width:700px; height:60px; }
+				/** 课时部分 */
+				.block_lesson_list_detail_content_title { float:left; width:400px; padding-top:0px; font-weight:bold; font-size:14px; }
+				.block_lesson_list_detail_content_title cite { margin-left:10px; font-size:12px; color:#17bfb2; font-weight:bold; }
+				.block_lesson_list_detail_content_course { float:left; width:400px; padding-top:4px; font-size:12px; color:#666666; }
+				.block_lesson_list_detail_content_time { float:left; width:400px; padding-top:4px; font-size:12px; color:#666666; }
+				
+			.block_basic_main_list_detail_ope { float:left; width:140px; height:40px; padding-top:5px; }
+				.block_basic_main_list_detail_ope input { float:left; width:90px; height:24px; margin-bottom:5px; background:url(image/button_middle_bg.jpg) no-repeat; border:0; color:#ffffff; font-weight:bold; }
+				.block_basic_main_list_detail_ope cite { font-size:12px; color:#17bfb2; font-weight:bold; }
+				
+	.block_basic_main_edit_area { float:left; width:880px; padding:0px 40px 15px 38px; }
+		.block_basic_main_edit_area .edit_area_row { float:left; width:100%; padding:15px 0 6px 0; border-bottom:1px dashed #efefef; }
+		
+			.block_basic_main_edit_area .edit_area_row .edit_title { float:left; width:100px; line-height:20px; padding-right:15px; text-align:right; font-size:14px; }
+			.block_basic_main_edit_area .edit_area_row .edit_interactive { float:left; width:600px; line-height:20px; }
+				.block_basic_main_edit_area .edit_area_row .edit_interactive .word { float:left; padding:0 5px; line-height:20px; }
+				.block_basic_main_edit_area .edit_area_row select { border:1px solid #999999; }
+				.block_basic_main_edit_area .edit_area_row .select_drop_middle { width:110px; height:22px; }
+				.block_basic_main_edit_area .edit_area_row .select_drop_big { width:140px; height:22px; }
+				.block_basic_main_edit_area .edit_area_row input { border:1px solid #999999; line-height:20px; }
+				.block_basic_main_edit_area .edit_area_row .input_button_90 { width:90px; height:24px; background:url(image/button_middle_bg.jpg) no-repeat; border:0; color:#ffffff; font-weight:bold; }
+				.block_basic_main_edit_area .edit_area_row .input_text_small { padding:0px 2px; width:76px; height:20px; }
+				.block_basic_main_edit_area .edit_area_row .input_text_middle { padding:0px 2px; width:106px; height:20px; }
+				.block_basic_main_edit_area .edit_area_row .input_text_big { padding:0px 2px; width:136px; height:20px; }
+				.block_basic_main_edit_area .edit_area_row .input_text_bigger { padding:0px 2px; width:166px; height:20px; }
+			
+#block_schedule { float:left; width:960px; margin-left:20px; height:500px; background:#cccccc; }
+
+.span_font_weight_center{
+	font-size: 12px;
+	font-weight: bolder;
+	text-align: center;
+}
+				

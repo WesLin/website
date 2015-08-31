@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
+		>
+
+	<!-- 信令服务器地址 -->
+	<bean id="MessageServer" class="java.lang.String">
+		<constructor-arg value="192.168.18.7"/>
+	</bean>
+
+	<!-- 流媒体服务器地址 -->
+	<bean id="StreamServer" class="java.lang.String">
+		<constructor-arg value="192.168.2.123"/>
+	</bean>
+	
+	<!-- 录像数据服务器地址 -->
+	<bean id="RecordDataServer" class="java.lang.String">
+		<constructor-arg value="http://192.168.18.7:8080/lesson/record-data/"/>
+	</bean>
+	
+	<!-- 文件上传地址 -->
+	<bean id="FileUploadAddress" class="java.lang.String">
+		<constructor-arg value="http://192.168.18.7:8080/complex/uploadfile.htm"/>
+	</bean>
+	
+	<!-- 文件下载地址 -->
+	<bean id="FileDownloadAddress" class="java.lang.String">
+		<constructor-arg value="http://192.168.2.120/"/>
+	</bean>
+	
+	<!-- 文件暂存路径 -->
+	<bean id="FileTempFoloder" class="java.lang.String">
+		<constructor-arg value="C:\UPLOAD"/>
+	</bean>
+	
+	<!-- 文件管理请求地址 -->
+	<bean id="FilefoxRequestAddress" class="java.lang.String">
+		<constructor-arg value="http://192.168.2.120:8080"/>
+	</bean>
+	
+	<!-- 文件管理回调地址 -->
+	<bean id="FilefoxCallbackAddress" class="java.lang.String">
+		<constructor-arg value="http://192.168.18.7:8080/complex/filefoxcallback.htm"/>
+	</bean>
+
+	
+</beans>
